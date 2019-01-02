@@ -1,5 +1,8 @@
 body{
     padding:20px;
+    background: url('/site/image/workInProgress_laptop3.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 section .modal-body img{
