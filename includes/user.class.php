@@ -10,42 +10,59 @@ class user {
     
     public function __construct(){
      $this->userid=array(
+         "name"=>"userid",
          "content"=>"0",
-         "type"=>"number"
+         "defaultChecked"=>"",
+         "type"=>"hidden"
+         
      ); 
      $this->firstname=array(
+         "name"=>"firstname",
          "content"=>"",
          "type"=>"text",
+         "defaultChecked"=>"",
          "displayInfo"=>""
      );
      $this->lastname=array(
+         "name"=>"lastname",
          "content"=>"",
          "type"=>"text",
+         "defaultChecked"=>"",
          "displayInfo"=>""
          );
      $this->adres=array(
+         "name"=>"adres",
          "content"=>"",
          "type"=>"text",
+         "defaultChecked"=>"checked",
          "displayInfo"=>""
          );
      $this->city=array(
+         "name"=>"city",
          "content"=>"",
          "type"=>"text",
+         "defaultChecked"=>"checked",
          "displayInfo"=>""
          );
      $this->country=array(
+         "name"=>"country",
          "content"=>"",
          "type"=>"text",
+         "defaultChecked"=>"checked",
          "displayInfo"=>""
          );
      $this->email=array(
+         "name"=>"email",
          "content"=>"",
          "type"=>"email",
+         "defaultChecked"=>"checked",
          "displayInfo"=>""
          );
      $this->user_info=array(
+         "name"=>"user_info",
          "content"=>"",
-         "type"=>"text",
+         "type"=>"textarea",
+         "defaultChecked"=>"checked",
          "displayInfo"=>""
          );
     }

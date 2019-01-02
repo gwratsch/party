@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="734px" preserveAspectRatio="none" style="width:313px;height:734px;" version="1.1" viewBox="0 0 313 734" width="313px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="fzvm3a372iawm" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--cluster database-->
+        <polygon fill="#FFFFFF" filter="url(#fzvm3a372iawm)" points="81,24,151,24,158,47.6094,229,47.6094,229,384,81,384,81,24" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="81" x2="158" y1="47.6094" y2="47.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="64" x="85" y="40.5332">database</text>
+        <!--class DB-->
+        <rect fill="#FEFECE" filter="url(#fzvm3a372iawm)" height="144.8516" style="stroke: #A80036; stroke-width: 1.5;" width="112" x="99" y="223"/>
+        <ellipse cx="142.35" cy="239" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M144.5375,240.7656 L140.3969,240.7656 L139.975,241.7969 L140.3969,241.7969 Q141.0063,241.7969 141.2719,242.0313 Q141.5375,242.2656 141.5375,242.6563 Q141.5375,243.0313 141.2719,243.2656 Q141.0063,243.5 140.3969,243.5 L138.1,243.5 Q137.4906,243.5 137.2328,243.2656 Q136.975,243.0313 136.975,242.6406 Q136.975,242.2656 137.2484,242.0234 Q137.5219,241.7813 138.1469,241.7969 L140.8188,235.1406 L139.7094,235.1406 Q139.1,235.1406 138.8344,234.9063 Q138.5688,234.6719 138.5688,234.2813 Q138.5688,233.9063 138.8344,233.6719 Q139.1,233.4375 139.7094,233.4375 L143.3813,233.4375 L146.7719,241.7969 Q147.3656,241.7969 147.5531,241.9375 Q147.9438,242.2031 147.9438,242.6563 Q147.9438,243.0313 147.6859,243.2656 Q147.4281,243.5 146.8188,243.5 L144.5219,243.5 Q143.9125,243.5 143.6469,243.2656 Q143.3813,243.0313 143.3813,242.6406 Q143.3813,242.2656 143.6469,242.0313 Q143.9125,241.7969 144.5219,241.7969 L144.9438,241.7969 L144.5375,240.7656 Z M143.8188,239.0625 L142.4594,235.6875 L141.0844,239.0625 L143.8188,239.0625 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="17" x="162.65" y="243.9102">DB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="100" x2="210" y1="255" y2="255"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="105" y="270.4189">-connect : configdb</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="105" y="284.2549">-updatedb: dbupdate</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="100" x2="210" y1="290.6719" y2="290.6719"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="105" y="306.0908">-connect()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="35" x="105" y="319.9268">insert()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="41" x="105" y="333.7627">update()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="105" y="347.5986">delete()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="105" y="361.4346">select()</text>
+        <!--class configdb-->
+        <rect fill="#FEFECE" filter="url(#fzvm3a372iawm)" height="103.3438" style="stroke: #A80036; stroke-width: 1.5;" width="116" x="97" y="60"/>
+        <ellipse cx="128.2" cy="76" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M129.1531,72.6406 L129.1531,79.2969 L130.8719,79.2969 Q131.4813,79.2969 131.7469,79.5313 Q132.0125,79.7656 132.0125,80.1563 Q132.0125,80.5313 131.7469,80.7656 Q131.4813,81 130.8719,81 L125.7312,81 Q125.1219,81 124.8562,80.7656 Q124.5906,80.5313 124.5906,80.1406 Q124.5906,79.7656 124.8562,79.5313 Q125.1219,79.2969 125.7312,79.2969 L127.45,79.2969 L127.45,72.6406 L125.7312,72.6406 Q125.1219,72.6406 124.8562,72.4063 Q124.5906,72.1719 124.5906,71.7813 Q124.5906,71.4063 124.8562,71.1719 Q125.1219,70.9375 125.7312,70.9375 L130.8719,70.9375 Q131.4813,70.9375 131.7469,71.1719 Q132.0125,71.4063 132.0125,71.7813 Q132.0125,72.1719 131.7469,72.4063 Q131.4813,72.6406 130.8719,72.6406 L129.1531,72.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="48" x="145.8" y="80.9102">configdb</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="98" x2="212" y1="92" y2="92"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="55" x="103" y="107.4189">#user : text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="103" y="121.2549">#pwd : password</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="103" y="135.0908">#host: text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="103" y="148.9268">#databasename : text</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="98" x2="212" y1="155.3438" y2="155.3438"/>
+        <!--class User-->
+        <rect fill="#FEFECE" filter="url(#fzvm3a372iawm)" height="297.0469" style="stroke: #A80036; stroke-width: 1.5;" width="298" x="6" y="428"/>
+        <ellipse cx="137.25" cy="444" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M140.0156,439.875 Q140.1719,439.6563 140.3594,439.5469 Q140.5469,439.4375 140.7656,439.4375 Q141.1406,439.4375 141.375,439.6953 Q141.6094,439.9531 141.6094,440.5625 L141.6094,442.0156 Q141.6094,442.625 141.375,442.8906 Q141.1406,443.1563 140.7656,443.1563 Q140.4219,443.1563 140.2188,442.9531 Q140.0156,442.7656 139.9063,442.25 Q139.8594,441.8906 139.6719,441.7031 Q139.3438,441.3281 138.7344,441.1094 Q138.125,440.8906 137.5,440.8906 Q136.7344,440.8906 136.1016,441.2188 Q135.4688,441.5469 134.9766,442.2969 Q134.4844,443.0469 134.4844,444.0781 L134.4844,445.1719 Q134.4844,446.4063 135.375,447.2266 Q136.2656,448.0469 137.8594,448.0469 Q138.7969,448.0469 139.4531,447.7969 Q139.8438,447.6406 140.2656,447.2031 Q140.5313,446.9375 140.6797,446.8594 Q140.8281,446.7813 141.0313,446.7813 Q141.3594,446.7813 141.6172,447.0391 Q141.875,447.2969 141.875,447.6406 Q141.875,447.9844 141.5313,448.3906 Q141.0313,448.9688 140.2344,449.2969 Q139.1563,449.75 137.8594,449.75 Q136.3438,449.75 135.1406,449.125 Q134.1563,448.625 133.4688,447.5547 Q132.7813,446.4844 132.7813,445.2031 L132.7813,444.0469 Q132.7813,442.7188 133.3984,441.5703 Q134.0156,440.4219 135.1094,439.8047 Q136.2031,439.1875 137.4375,439.1875 Q138.1719,439.1875 138.8203,439.3516 Q139.4688,439.5156 140.0156,439.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="157.75" y="448.9102">User</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="303" y1="460" y2="460"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="286" x="12" y="475.4189">userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="12" y="489.2549">firstname :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="12" y="503.0908">lastname :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="12" y="516.9268">adres :VARCHAR(50) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="148" x="12" y="530.7627">city :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="12" y="544.5986">country :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="12" y="558.4346">email :VARCHAR(50)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="12" y="572.2705">user_info :VARCHAR(255)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="12" y="586.1064">-reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="303" y1="592.5234" y2="592.5234"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="12" y="607.9424">+saveUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="12" y="621.7783">-insertUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="12" y="635.6143">-updateUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="12" y="649.4502">-deleteUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="12" y="663.2861">-selectUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="12" y="677.1221">-insertUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="12" y="690.958">-updateUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="12" y="704.7939">-deleteUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="12" y="718.6299">-selectUserDisplayOption()</text>
+        <path d="M155,183.577 C155,196.523 155,210.035 155,222.993 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="148,183.197,155,163.197,162,183.197,148,183.197" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M155,388.451 C155,401.184 155,414.518 155,427.951 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="148,388.349,155,368.349,162,388.349,148,388.349" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <!--
+@startuml
+skinparam classAttributeIconSize 0
+
+class User{
+    {field} userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} firstname :VARCHAR(30) NOT NULL
+    {field} lastname :VARCHAR(30) NOT NULL
+    {field} adres :VARCHAR(50) NOT NULL
+    {field} city :VARCHAR(30) NOT NULL
+    {field} country :VARCHAR(30) NOT NULL
+    {field} email :VARCHAR(50)
+    {field} user_info :VARCHAR(255)
+    {field} - reg_date :TIMESTAMP
+    + saveUser()
+    - insertUser()
+    - updateUser()
+    - deleteUser()
+    - selectUser()
+    - insertUserDisplayOption()
+    - updateUserDisplayOption()
+    - deleteUserDisplayOption()
+    - selectUserDisplayOption()
+}
+
+class Party{
+    {field} partyId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} userid :int(6) NOT NULL
+    {field} partyInfo :VARCHAR(255) NOT NULL
+    {field} location :VARCHAR(100) NOT NULL
+    {field} - reg_date :IMESTAMP
+    {method} - countcheck_wishlists()
+    selectparty()
+    insertparty()
+    updateparty()
+    deleteparty()
+}
+class Wishlist{
+    {field} wlId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
+    {field} partyId :nt(6) NOT NULL
+    {field} userid :int(6) NOT NULL
+    {field} wlInfo :VARCHAR(255) NOT NULL
+    {field} - reg_date :TIMESTAMP
+    insertlist()
+    updatelist()
+    deletelist()
+    selectlist()
+}
+
+
+package "database" {
+    abstract DB{
+        - connect : configdb
+        - updatedb: dbupdate
+        - connect()
+        insert()
+        update()
+        delete()
+        select()
+    }
+    interface configdb{
+        # user : text
+        # pwd : password
+        # host: text
+        # databasename : text
+    }
+    interface dbupdate {
+        {field} # lastupdate :int(6) NOT NULL
+        {field} # reg_date :TIMESTAMP
+        # checkUpdateStatus()
+        # executeUpdate()
+        # changeLastupdate()
+    }
+    configdb <|.. DB
+    dbupdate <|.. DB
+
+}
+
+DB <|.. User
+DB <|.. Party
+DB <|.. Wishlist
+User "1" - - "0..*" Party : participatePartyList
+Party "1" -right- "1" Wishlist : userPartyCombination
+User "1" - - "*" Wishlist : changeWishlist
+    hide dbupdate
+    hide Party
+    hide Wishlist
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 18:18:59 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_112-b15
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: nl
+Country: NL
+-->
+    </g>
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="289px" preserveAspectRatio="none" style="width:677px;height:289px;" version="1.1" viewBox="0 0 677 289" width="677px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1lcerwxuj4nrz" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--cluster registration-->
+        <rect fill="#FFFFFF" filter="url(#f1lcerwxuj4nrz)" height="151" style="stroke: #000000; stroke-width: 2.0;" width="168" x="502" y="24.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="545" y="41.0332">registration</text>
+        <ellipse cx="585.7635" cy="143.4527" fill="#FEFECE" filter="url(#f1lcerwxuj4nrz)" rx="67.7635" ry="15.9527" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="538.2635" y="148.7574">user registratie</text>
+        <ellipse cx="586.2193" cy="76.4517" fill="#FEFECE" filter="url(#f1lcerwxuj4nrz)" rx="44.7193" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="556.7193" y="81.7564">database</text>
+        <!--entity visitor-->
+        <ellipse cx="232" cy="111" fill="#FEFECE" filter="url(#f1lcerwxuj4nrz)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M232,119 L232,146 M219,127 L245,127 M232,146 L219,161 M232,146 L245,161 " fill="#FEFECE" filter="url(#f1lcerwxuj4nrz)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="213.5" y="182.5332">visitor</text>
+        <polygon fill="#FBFB77" filter="url(#f1lcerwxuj4nrz)" points="6,221,6,280.0547,458,280.0547,458,231,448,221,6,221" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#FBFB77" points="6,221,6,280.0547,458,280.0547,458,231,448,221,236,221,232,186.0887,228,221,6,221" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="448" x2="448" y1="221" y2="231"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="458" x2="448" y1="231" y2="231"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="352" x="12" y="239.4951">Aannamen: De bezoeker gebruikt de nieuwste browser versie</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="427" x="12" y="255.8467">Interactie: De user registreerd zich voor deelname aan 1 of meer feest(en).</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="90" x="12" y="272.1982">Uitzonderingen:</text>
+        <path d="M250.94,143.5 C299.414,143.5 434.931,143.5 517.71,143.5 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M586,127.273 C586,122.365 586,117.456 586,112.547 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="579,112.367,586,92.367,593,112.367,579,112.367" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <!--
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+    actor visitor
+
+rectangle registration{
+    (user registratie)
+    (database)
+    visitor - (user registratie)
+    (user registratie) .|>  (database)
+}
+note bottom of visitor
+    Aannamen: De bezoeker gebruikt de nieuwste browser versie
+    Interactie: De user registreerd zich voor deelname aan 1 of meer feest(en). 
+    Uitzonderingen:
+end note
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 18:18:59 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_112-b15
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: nl
+Country: NL
+-->
+    </g>
+</svg>

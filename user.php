@@ -1,32 +1,54 @@
 <?php
 include_once 'settings.php';
+$user = new user();
 if(array_key_exists('submit', $_POST)){
     //include_once 'includes/user.class.php';
-    $user = new user();
     $user->save();
 }    
 ?>
 <!DOCTYPE html>
 <html lang="nl">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php 
+        include 'templates/head.php';
+        ?>
         <title>partyList</title>
     </head>
     <body>
-        <header><h1><?php t("Wishlist");?></h1></header>
-        <nav></nav>
-        <section>
-            <form action="user.php" method="post">
-                <input type="hidden" name="userid" value="">
-                <label><?php t("firstname");?></label>:<input type="text" name="firstname"><input type="checkbox" name="firstnameblock" ><br />
-                <label><?php t("lastname");?></label>:<input type="text" name="lastname"><input type="checkbox" name="lastnameblock" ><br />
-                <label><?php t("adres");?></label>:<input type="text" name="adres"><input type="checkbox" name="adresblock" checked><br />
-                <label><?php t("city");?></label>:<input type="text" name="city"><input type="checkbox" name="cityblock" checked><br />
-                <label><?php t("country");?></label>:<input type="text" name="country"><input type="checkbox" name="countryblock" checked><br />
-                <label><?php t("email");?></label>:<input type="email" name="email"><input type="checkbox" name="emailblock" checked><br />
-                <label><?php t("user_info");?></label>:<textarea name="user_info"></textarea><input type="checkbox" name="user_infoblock" checked><br />
-                <input type="submit" name="submit">
+        <?php 
+        include 'templates/header.php';
+        include 'templates/navigation.php';
+        ?>
+        <section class="container">
+            <h2><?php echo t("User settings");?></h2>
+            <form action="user.php" method="post" class="form-horizontal">
+                <?php
+                $formContent='';
+                foreach ($user as $keyName => $keyContent) {
+                    $type = $keyContent['type'];
+                    $name = $keyContent['name'];
+                    $content = $keyContent['content'];
+                    $defaultChecked = $keyContent['defaultChecked'];
+                   switch ($type) {
+                        case 'hidden':
+                            $formContent .='<input type="'.$type.'" name="'.$name.'" value="'.$content.'">';
+                            break;
+                        case 'text':
+                            $formContent .='<div><label>'.t($name).'</label></div>:<input type="'.$type.'" name="'.$name.'" class="form-control" value="'.$content.'"><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
+                            break;
+                        case 'email':
+                            $formContent .='<div><label>'.t($name).'</label></div>:<input type="'.$type.'" name="'.$name.'" class="form-control" value="'.$content.'"><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
+                            break;
+                        case 'textarea':
+                            $formContent .='<div><label>'.t($name).'</label></div>:<textarea name="'.$name.'" class="form-control" >'.$content.'</textarea><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                echo $formContent;
+                ?>
+                  <input type="submit" name="submit">
             </form>
         </section>
     </body>

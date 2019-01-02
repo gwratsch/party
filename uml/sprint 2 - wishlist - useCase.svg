@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="322px" preserveAspectRatio="none" style="width:677px;height:322px;" version="1.1" viewBox="0 0 677 322" width="677px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="fw0kxal3n9zwp" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--cluster registration-->
+        <rect fill="#FFFFFF" filter="url(#fw0kxal3n9zwp)" height="218" style="stroke: #000000; stroke-width: 2.0;" width="168" x="502" y="24.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="545" y="41.0332">registration</text>
+        <ellipse cx="585.7635" cy="143.4527" fill="#FEFECE" filter="url(#fw0kxal3n9zwp)" rx="67.7635" ry="15.9527" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="538.2635" y="148.7574">user registratie</text>
+        <ellipse cx="586.2193" cy="76.4517" fill="#FEFECE" filter="url(#fw0kxal3n9zwp)" rx="44.7193" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="556.7193" y="81.7564">database</text>
+        <ellipse cx="586.1127" cy="210.4517" fill="#FEFECE" filter="url(#fw0kxal3n9zwp)" rx="34.1127" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="564.1127" y="215.7564">wishlist</text>
+        <!--entity visitor-->
+        <ellipse cx="232" cy="144" fill="#FEFECE" filter="url(#fw0kxal3n9zwp)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <path d="M232,152 L232,179 M219,160 L245,160 M232,179 L219,194 M232,179 L245,194 " fill="#FEFECE" filter="url(#fw0kxal3n9zwp)" style="stroke: #A80036; stroke-width: 2.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="213.5" y="215.5332">visitor</text>
+        <polygon fill="#FBFB77" filter="url(#fw0kxal3n9zwp)" points="6,254,6,313.0547,458,313.0547,458,264,448,254,6,254" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="#FBFB77" points="6,254,6,313.0547,458,313.0547,458,264,448,254,236,254,232,219.0887,228,254,6,254" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="448" x2="448" y1="254" y2="264"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="458" x2="448" y1="264" y2="264"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="352" x="12" y="272.4951">Aannamen: De bezoeker gebruikt de nieuwste browser versie</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="427" x="12" y="288.8467">Interactie: De user registreerd zich voor deelname aan 1 of meer feest(en).</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="90" x="12" y="305.1982">Uitzonderingen:</text>
+        <path d="M250.94,174.818 C300.395,170.182 440.45,157.052 522.668,149.344 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M586,127.273 C586,122.365 586,117.456 586,112.547 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="579,112.367,586,92.367,593,112.367,579,112.367" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M250.94,178.233 C307.119,183.659 480.214,200.379 552.626,207.373 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M586,194.797 C586,189.746 586,184.694 586,179.643 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <polygon fill="none" points="579,179.53,586,159.53,593,179.53,579,179.53" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <!--
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+    actor visitor
+
+rectangle registration{
+    visitor - (user registratie)
+    (user registratie) .|>  (database)
+    visitor - (wishlist)
+    (wishlist) -|> (user registratie)
+}
+note bottom of visitor
+    Aannamen: De bezoeker gebruikt de nieuwste browser versie
+    Interactie: De user registreerd zich voor deelname aan 1 of meer feest(en). 
+    Uitzonderingen:
+end note
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 18:18:59 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_112-b15
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: nl
+Country: NL
+-->
+    </g>
+</svg>

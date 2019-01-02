@@ -1,0 +1,97 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class User{
+    {field} userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} firstname :VARCHAR(30) NOT NULL
+    {field} lastname :VARCHAR(30) NOT NULL
+    {field} adres :VARCHAR(50) NOT NULL
+    {field} city :VARCHAR(30) NOT NULL
+    {field} country :VARCHAR(30) NOT NULL
+    {field} email :VARCHAR(50)
+    {field} user_info :VARCHAR(255)
+    {field} - reg_date :TIMESTAMP
+    + saveUser()
+    - insertUser()
+    - updateUser()
+    - deleteUser()
+    - selectUser()
+    - insertUserDisplayOption()
+    - updateUserDisplayOption()
+    - deleteUserDisplayOption()
+    - selectUserDisplayOption()
+}
+
+class Party{
+    {field} partyId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} userid :int(6) NOT NULL
+    {field} partyInfo :VARCHAR(255) NOT NULL
+    {field} location :VARCHAR(100) NOT NULL
+    {field} partylist : BOOLEAN (yes / no)
+    {field} - reg_date :IMESTAMP
+    {method} - countcheck_wishlists()
+    +saveparty()
+    -selectparty()
+    -insertparty()
+    -updateparty()
+    -deleteparty()
+}
+class Wishlist{
+    {field} wlId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
+    {field} partyId :nt(6) NOT NULL
+    {field} userid :int(6) NOT NULL
+    {field} wlInfo :VARCHAR(255) NOT NULL
+    {field} - reg_date :TIMESTAMP
+    +savewishlist()
+    -insertlist()
+    -updatelist()
+    -deletelist()
+    -selectlist()
+}
+
+interface translation{
+    t()
+}
+    
+interface security{
+    clean()
+    valid()
+    removeHtmlTag()
+}
+
+package "database" {
+    abstract DB{
+        - connect : configdb
+        - updatedb: dbupdate
+        - connect()
+        insert()
+        update()
+        delete()
+        select()
+    }
+    interface configdb{
+        # user : text
+        # pwd : password
+        # host: text
+        # databasename : text
+    }
+    interface dbupdate {
+        {field} # lastupdate :int(6) NOT NULL
+        {field} # reg_date :TIMESTAMP
+        # checkUpdateStatus()
+        # executeUpdate()
+        # changeLastupdate()
+    }
+    configdb <|.. DB
+    dbupdate <|.. DB
+
+}
+
+DB <|.. User
+DB <|.. Party
+DB <|.. Wishlist
+User "1" -- "0..*" Party : participatePartyList
+Party "1" -right- "1" Wishlist : userPartyCombination
+User "1" -- "*" Wishlist : changeWishlist
+
+@enduml

@@ -54,7 +54,24 @@ function updateConfig($formDBsettings){
 // save in the database the last executed update key
 function updateDB(){
     $updateScripts= array(
-        "1"=>"create DB version control table"
+        "1"=>"CREATE TABLE dbconfig (
+    lastupdate int(6) NOT NULL,
+    reg_date TIMESTAMP
+    )",
+        "2"=>"CREATE TABLE party (
+    partyId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    userid int(6) NOT NULL,
+    partyInfo VARCHAR(255) NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    reg_date TIMESTAMP
+    )",
+        "3"=>"CREATE TABLE wishlist (
+    wlId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    partyId int(6) NOT NULL,
+    userid int(6) NOT NULL,
+    wlInfo VARCHAR(255) NOT NULL,
+    reg_date TIMESTAMP
+    )"
     );
     return $updateScripts;
 }

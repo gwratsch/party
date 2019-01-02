@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+    actor visitor
+
+rectangle registration{
+    visitor - (user registratie)
+    (user registratie) .|>  (database)
+    visitor - (wishlist)
+    (wishlist) -|> (user registratie)
+}
+note bottom of visitor
+    Aannamen: De bezoeker gebruikt de nieuwste browser versie
+    Interactie: De user registreerd zich voor deelname aan 1 of meer feest(en). 
+    Uitzonderingen:
+end note
+@enduml
+

@@ -1,6 +1,6 @@
 <?php
 
 function t($text){
-    echo $text;
+    return $text;
 }
 

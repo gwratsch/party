@@ -1,0 +1,84 @@
+Model dictionary
+
+
+class User
+    userId :AUTO_INCREMENT PRIMARY KEY 
+    firstname :
+    lastname :
+    adres :
+    city :
+    country :
+    email :
+    user_info : the can tell who he is, what he/she likes, hobby, sports, work etc.
+    reg_date :TIMESTAMP
+    saveUser(): basic function to execute the functions for User / UserDisplayOption (insert, update, delete or select).
+    insertUser()
+    updateUser()
+    deleteUser()
+    selectUser()
+    insertUserDisplayOption(): saves which fields are not for public display.
+    updateUserDisplayOption()
+    deleteUserDisplayOption()
+    selectUserDisplayOption()
+
+
+class Party
+    partyId :AUTO_INCREMENT PRIMARY KEY 
+    userid : the user who created the party
+    partyInfo : What kind of party is it? ( wedding, birthday, chrismass, etc)
+    location : where the party is given
+    partylist : yes: the person who gives a party (example: birthday, wedding) crates 1 wishlist to chose from.
+                no: every participant will create a wishlist and will be secretly geven to an other participant.
+    reg_date :IMESTAMP
+    countcheck_wishlists()
+    saveparty(): basic function who will execute insertparty / updateparty.
+    selectparty()
+    insertparty()
+    updateparty()
+    deleteparty()
+
+class Wishlist
+    wlId :AUTO_INCREMENT PRIMARY KEY
+    partyId :
+    userid : the user who made the wishlist
+    wlInfo : list of articles
+    reg_date :TIMESTAMP
+    savewishlist(): basic function who will execute insertlist / updatelist.
+    insertlist()
+    updatelist()
+    deletelist()
+    selectlist()
+
+
+
+package "database" {
+    abstract DB
+        connect(): create a connection with the database and user configdb info.
+        insert()
+        update()
+        delete()
+        select()
+    
+    interface configdb
+        user : database username
+        pwd : password
+        host: localhost
+        databasename :
+    
+    interface dbupdate 
+        lastupdate : the last executed database update id.
+        reg_date :TIMESTAMP
+        checkUpdateStatus()
+        executeUpdate()
+        changeLastupdate()
+    
+
+interface translation{
+    t(): translate the default text in the website.
+}
+    
+interface security{
+    clean(): remove tag's, space and - from the reseaved text
+    valid(): check if the reseaved info confirm the field specifications
+    removeHtmlTag(): remove the tag's from the reseaved field content.
+}

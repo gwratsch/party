@@ -1,0 +1,33 @@
+body{
+    padding:20px;
+}
+
+section .modal-body img{
+    width: 100%;
+    height:auto;
+}
+
+
+section img{
+    width:200px;
+    height:auto;
+}
+.projectitem{
+    min-height:150px;
+    
+}
+form div{
+    width: 100px;
+    display: inline-block;
+}
+form input.form-control, form textarea.form-control{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+    display: inline-block;
+}
+@media (min-width: 768px){
+    .modal-open .modal-dialog {
+        max-width: 80%;
+    }
+} 

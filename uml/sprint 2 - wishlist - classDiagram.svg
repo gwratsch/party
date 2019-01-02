@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1016px" preserveAspectRatio="none" style="width:768px;height:1016px;" version="1.1" viewBox="0 0 768 1016" width="768px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1998nk7wq9dsq" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--cluster database-->
+        <polygon fill="#FFFFFF" filter="url(#f1998nk7wq9dsq)" points="216.5,24,286.5,24,293.5,47.6094,551.5,47.6094,551.5,399,216.5,399,216.5,24" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="216.5" x2="293.5" y1="47.6094" y2="47.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="64" x="220.5" y="40.5332">database</text>
+        <!--class DB-->
+        <rect fill="#FEFECE" filter="url(#f1998nk7wq9dsq)" height="144.8516" style="stroke: #A80036; stroke-width: 1.5;" width="112" x="336.5" y="238"/>
+        <ellipse cx="379.85" cy="254" fill="#A9DCDF" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M382.0375,255.7656 L377.8969,255.7656 L377.475,256.7969 L377.8969,256.7969 Q378.5063,256.7969 378.7719,257.0313 Q379.0375,257.2656 379.0375,257.6563 Q379.0375,258.0313 378.7719,258.2656 Q378.5063,258.5 377.8969,258.5 L375.6,258.5 Q374.9906,258.5 374.7328,258.2656 Q374.475,258.0313 374.475,257.6406 Q374.475,257.2656 374.7484,257.0234 Q375.0219,256.7813 375.6469,256.7969 L378.3188,250.1406 L377.2094,250.1406 Q376.6,250.1406 376.3344,249.9063 Q376.0688,249.6719 376.0688,249.2813 Q376.0688,248.9063 376.3344,248.6719 Q376.6,248.4375 377.2094,248.4375 L380.8813,248.4375 L384.2719,256.7969 Q384.8656,256.7969 385.0531,256.9375 Q385.4438,257.2031 385.4438,257.6563 Q385.4438,258.0313 385.1859,258.2656 Q384.9281,258.5 384.3188,258.5 L382.0219,258.5 Q381.4125,258.5 381.1469,258.2656 Q380.8813,258.0313 380.8813,257.6406 Q380.8813,257.2656 381.1469,257.0313 Q381.4125,256.7969 382.0219,256.7969 L382.4438,256.7969 L382.0375,255.7656 Z M381.3188,254.0625 L379.9594,250.6875 L378.5844,254.0625 L381.3188,254.0625 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="17" x="400.15" y="258.9102">DB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="337.5" x2="447.5" y1="270" y2="270"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="342.5" y="285.4189">-connect : configdb</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="342.5" y="299.2549">-updatedb: dbupdate</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="337.5" x2="447.5" y1="305.6719" y2="305.6719"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="342.5" y="321.0908">-connect()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="35" x="342.5" y="334.9268">insert()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="41" x="342.5" y="348.7627">update()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="342.5" y="362.5986">delete()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="342.5" y="376.4346">select()</text>
+        <!--class configdb-->
+        <rect fill="#FEFECE" filter="url(#f1998nk7wq9dsq)" height="103.3438" style="stroke: #A80036; stroke-width: 1.5;" width="116" x="419.5" y="67"/>
+        <ellipse cx="450.7" cy="83" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M451.6531,79.6406 L451.6531,86.2969 L453.3719,86.2969 Q453.9813,86.2969 454.2469,86.5313 Q454.5125,86.7656 454.5125,87.1563 Q454.5125,87.5313 454.2469,87.7656 Q453.9813,88 453.3719,88 L448.2313,88 Q447.6219,88 447.3563,87.7656 Q447.0906,87.5313 447.0906,87.1406 Q447.0906,86.7656 447.3563,86.5313 Q447.6219,86.2969 448.2313,86.2969 L449.95,86.2969 L449.95,79.6406 L448.2313,79.6406 Q447.6219,79.6406 447.3563,79.4063 Q447.0906,79.1719 447.0906,78.7813 Q447.0906,78.4063 447.3563,78.1719 Q447.6219,77.9375 448.2313,77.9375 L453.3719,77.9375 Q453.9813,77.9375 454.2469,78.1719 Q454.5125,78.4063 454.5125,78.7813 Q454.5125,79.1719 454.2469,79.4063 Q453.9813,79.6406 453.3719,79.6406 L451.6531,79.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="48" x="468.3" y="87.9102">configdb</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="420.5" x2="534.5" y1="99" y2="99"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="55" x="425.5" y="114.4189">#user : text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="425.5" y="128.2549">#pwd : password</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="425.5" y="142.0908">#host: text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="425.5" y="155.9268">#databasename : text</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="420.5" x2="534.5" y1="162.3438" y2="162.3438"/>
+        <!--class dbupdate-->
+        <rect fill="#FEFECE" filter="url(#f1998nk7wq9dsq)" height="117.1797" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="232.5" y="60"/>
+        <ellipse cx="277.75" cy="76" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M278.7031,72.6406 L278.7031,79.2969 L280.4219,79.2969 Q281.0313,79.2969 281.2969,79.5313 Q281.5625,79.7656 281.5625,80.1563 Q281.5625,80.5313 281.2969,80.7656 Q281.0313,81 280.4219,81 L275.2813,81 Q274.6719,81 274.4063,80.7656 Q274.1406,80.5313 274.1406,80.1406 Q274.1406,79.7656 274.4063,79.5313 Q274.6719,79.2969 275.2813,79.2969 L277,79.2969 L277,72.6406 L275.2813,72.6406 Q274.6719,72.6406 274.4063,72.4063 Q274.1406,72.1719 274.1406,71.7813 Q274.1406,71.4063 274.4063,71.1719 Q274.6719,70.9375 275.2813,70.9375 L280.4219,70.9375 Q281.0313,70.9375 281.2969,71.1719 Q281.5625,71.4063 281.5625,71.7813 Q281.5625,72.1719 281.2969,72.4063 Q281.0313,72.6406 280.4219,72.6406 L278.7031,72.6406 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="53" x="298.25" y="80.9102">dbupdate</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="233.5" x2="383.5" y1="92" y2="92"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="140" x="238.5" y="107.4189">#lastupdate :int(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="238.5" y="121.2549">#reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="233.5" x2="383.5" y1="127.6719" y2="127.6719"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="238.5" y="143.0908">#checkUpdateStatus()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="238.5" y="156.9268">#executeUpdate()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="238.5" y="170.7627">#changeLastupdate()</text>
+        <!--class User-->
+        <rect fill="#FEFECE" filter="url(#f1998nk7wq9dsq)" height="297.0469" style="stroke: #A80036; stroke-width: 1.5;" width="298" x="243.5" y="446"/>
+        <ellipse cx="374.75" cy="462" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M377.5156,457.875 Q377.6719,457.6563 377.8594,457.5469 Q378.0469,457.4375 378.2656,457.4375 Q378.6406,457.4375 378.875,457.6953 Q379.1094,457.9531 379.1094,458.5625 L379.1094,460.0156 Q379.1094,460.625 378.875,460.8906 Q378.6406,461.1563 378.2656,461.1563 Q377.9219,461.1563 377.7188,460.9531 Q377.5156,460.7656 377.4063,460.25 Q377.3594,459.8906 377.1719,459.7031 Q376.8438,459.3281 376.2344,459.1094 Q375.625,458.8906 375,458.8906 Q374.2344,458.8906 373.6016,459.2188 Q372.9688,459.5469 372.4766,460.2969 Q371.9844,461.0469 371.9844,462.0781 L371.9844,463.1719 Q371.9844,464.4063 372.875,465.2266 Q373.7656,466.0469 375.3594,466.0469 Q376.2969,466.0469 376.9531,465.7969 Q377.3438,465.6406 377.7656,465.2031 Q378.0313,464.9375 378.1797,464.8594 Q378.3281,464.7813 378.5313,464.7813 Q378.8594,464.7813 379.1172,465.0391 Q379.375,465.2969 379.375,465.6406 Q379.375,465.9844 379.0313,466.3906 Q378.5313,466.9688 377.7344,467.2969 Q376.6563,467.75 375.3594,467.75 Q373.8438,467.75 372.6406,467.125 Q371.6563,466.625 370.9688,465.5547 Q370.2813,464.4844 370.2813,463.2031 L370.2813,462.0469 Q370.2813,460.7188 370.8984,459.5703 Q371.5156,458.4219 372.6094,457.8047 Q373.7031,457.1875 374.9375,457.1875 Q375.6719,457.1875 376.3203,457.3516 Q376.9688,457.5156 377.5156,457.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="395.25" y="466.9102">User</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="244.5" x2="540.5" y1="478" y2="478"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="286" x="249.5" y="493.4189">userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="249.5" y="507.2549">firstname :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="249.5" y="521.0908">lastname :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="159" x="249.5" y="534.9268">adres :VARCHAR(50) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="148" x="249.5" y="548.7627">city :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="249.5" y="562.5986">country :VARCHAR(30) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="249.5" y="576.4346">email :VARCHAR(50)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="249.5" y="590.2705">user_info :VARCHAR(255)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="249.5" y="604.1064">-reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="244.5" x2="540.5" y1="610.5234" y2="610.5234"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="249.5" y="625.9424">+saveUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="249.5" y="639.7783">-insertUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="249.5" y="653.6143">-updateUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="249.5" y="667.4502">-deleteUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="249.5" y="681.2861">-selectUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="249.5" y="695.1221">-insertUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="249.5" y="708.958">-updateUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="249.5" y="722.7939">-deleteUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="249.5" y="736.6299">-selectUserDisplayOption()</text>
+        <!--class Party-->
+        <rect fill="#FEFECE" filter="url(#f1998nk7wq9dsq)" height="186.3594" style="stroke: #A80036; stroke-width: 1.5;" width="301" x="6" y="821"/>
+        <ellipse cx="138.75" cy="837" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M141.5156,832.875 Q141.6719,832.6563 141.8594,832.5469 Q142.0469,832.4375 142.2656,832.4375 Q142.6406,832.4375 142.875,832.6953 Q143.1094,832.9531 143.1094,833.5625 L143.1094,835.0156 Q143.1094,835.625 142.875,835.8906 Q142.6406,836.1563 142.2656,836.1563 Q141.9219,836.1563 141.7188,835.9531 Q141.5156,835.7656 141.4063,835.25 Q141.3594,834.8906 141.1719,834.7031 Q140.8438,834.3281 140.2344,834.1094 Q139.625,833.8906 139,833.8906 Q138.2344,833.8906 137.6016,834.2188 Q136.9688,834.5469 136.4766,835.2969 Q135.9844,836.0469 135.9844,837.0781 L135.9844,838.1719 Q135.9844,839.4063 136.875,840.2266 Q137.7656,841.0469 139.3594,841.0469 Q140.2969,841.0469 140.9531,840.7969 Q141.3438,840.6406 141.7656,840.2031 Q142.0313,839.9375 142.1797,839.8594 Q142.3281,839.7813 142.5313,839.7813 Q142.8594,839.7813 143.1172,840.0391 Q143.375,840.2969 143.375,840.6406 Q143.375,840.9844 143.0313,841.3906 Q142.5313,841.9688 141.7344,842.2969 Q140.6563,842.75 139.3594,842.75 Q137.8438,842.75 136.6406,842.125 Q135.6563,841.625 134.9688,840.5547 Q134.2813,839.4844 134.2813,838.2031 L134.2813,837.0469 Q134.2813,835.7188 134.8984,834.5703 Q135.5156,833.4219 136.6094,832.8047 Q137.7031,832.1875 138.9375,832.1875 Q139.6719,832.1875 140.3203,832.3516 Q140.9688,832.5156 141.5156,832.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="159.25" y="841.9102">Party</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="306" y1="853" y2="853"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="289" x="12" y="868.4189">partyId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="12" y="882.2549">userid :int(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="180" x="12" y="896.0908">partyInfo :VARCHAR(255) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="12" y="909.9268">location :VARCHAR(100) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="12" y="923.7627">-reg_date :IMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="306" y1="930.1797" y2="930.1797"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="12" y="945.5986">-countcheck_wishlists()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="12" y="959.4346">selectparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="12" y="973.2705">insertparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="12" y="987.1064">updateparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="12" y="1000.9424">deleteparty()</text>
+        <!--class Wishlist-->
+        <rect fill="#FEFECE" filter="url(#f1998nk7wq9dsq)" height="172.5234" style="stroke: #A80036; stroke-width: 1.5;" width="288" x="471.5" y="827.5"/>
+        <ellipse cx="589.25" cy="843.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M592.0156,839.375 Q592.1719,839.1563 592.3594,839.0469 Q592.5469,838.9375 592.7656,838.9375 Q593.1406,838.9375 593.375,839.1953 Q593.6094,839.4531 593.6094,840.0625 L593.6094,841.5156 Q593.6094,842.125 593.375,842.3906 Q593.1406,842.6563 592.7656,842.6563 Q592.4219,842.6563 592.2188,842.4531 Q592.0156,842.2656 591.9063,841.75 Q591.8594,841.3906 591.6719,841.2031 Q591.3438,840.8281 590.7344,840.6094 Q590.125,840.3906 589.5,840.3906 Q588.7344,840.3906 588.1016,840.7188 Q587.4688,841.0469 586.9766,841.7969 Q586.4844,842.5469 586.4844,843.5781 L586.4844,844.6719 Q586.4844,845.9063 587.375,846.7266 Q588.2656,847.5469 589.8594,847.5469 Q590.7969,847.5469 591.4531,847.2969 Q591.8438,847.1406 592.2656,846.7031 Q592.5313,846.4375 592.6797,846.3594 Q592.8281,846.2813 593.0313,846.2813 Q593.3594,846.2813 593.6172,846.5391 Q593.875,846.7969 593.875,847.1406 Q593.875,847.4844 593.5313,847.8906 Q593.0313,848.4688 592.2344,848.7969 Q591.1563,849.25 589.8594,849.25 Q588.3438,849.25 587.1406,848.625 Q586.1563,848.125 585.4688,847.0547 Q584.7813,845.9844 584.7813,844.7031 L584.7813,843.5469 Q584.7813,842.2188 585.3984,841.0703 Q586.0156,839.9219 587.1094,839.3047 Q588.2031,838.6875 589.4375,838.6875 Q590.1719,838.6875 590.8203,838.8516 Q591.4688,839.0156 592.0156,839.375 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="609.75" y="848.4102">Wishlist</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="472.5" x2="758.5" y1="859.5" y2="859.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="276" x="477.5" y="874.9189">wlId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="115" x="477.5" y="888.7549">partyId :nt(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="477.5" y="902.5908">userid :int(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="167" x="477.5" y="916.4268">wlInfo :VARCHAR(255) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="477.5" y="930.2627">-reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="472.5" x2="758.5" y1="936.6797" y2="936.6797"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="477.5" y="952.0986">insertlist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="477.5" y="965.9346">updatelist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="477.5" y="979.7705">deletelist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="477.5" y="993.6064">selectlist()</text>
+        <path d="M446.479,188.842 C439.358,204.758 431.773,221.712 424.608,237.728 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="440.164,185.814,454.722,170.417,452.944,191.531,440.164,185.814" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M342.113,195.529 C348.265,209.445 354.668,223.927 360.763,237.715 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="335.616,198.144,333.931,177.022,348.42,192.483,335.616,198.144" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M392.5,403.219 C392.5,416.938 392.5,431.369 392.5,445.894 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="385.5,403.025,392.5,383.025,399.5,403.025,385.5,403.025" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M319.401,352.6 C285.348,375.603 247.564,407.44 225.5,446 C158.746,562.66 149.203,721.507 150.965,820.611 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="315.651,346.688,336.247,341.707,323.253,358.445,315.651,346.688" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M465.582,352.458 C499.535,375.426 537.059,407.274 558.5,446 C624.768,565.69 628.72,728.679 623.533,827.067 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="461.765,358.326,448.773,341.587,469.368,346.57,461.765,358.326" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M282.791,743.096 C263.17,769.492 243.243,796.302 225.192,820.586 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="112" x="261.5" y="787.4951">participatePartyList</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="269.9537" y="764.6735">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="20" x="209.869" y="809.9994">0..*</text>
+        <path d="M307.112,914 C359.909,914 419.048,914 471.306,914 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="128" x="325.25" y="907.4951">userPartyCombination</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="315.0584" y="911.0824">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="456.6905" y="911.104">1</text>
+        <path d="M460.727,743.246 C470.297,759.833 480.612,776.103 491.5,791 C500.499,803.313 510.773,815.516 521.469,827.172 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="89" x="492.5" y="787.4951">changeWishlist</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="456.8622" y="764.3409">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="508.1734" y="816.5534">*</text>
+        <!--
+@startuml
+skinparam classAttributeIconSize 0
+
+class User{
+    {field} userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} firstname :VARCHAR(30) NOT NULL
+    {field} lastname :VARCHAR(30) NOT NULL
+    {field} adres :VARCHAR(50) NOT NULL
+    {field} city :VARCHAR(30) NOT NULL
+    {field} country :VARCHAR(30) NOT NULL
+    {field} email :VARCHAR(50)
+    {field} user_info :VARCHAR(255)
+    {field} - reg_date :TIMESTAMP
+    + saveUser()
+    - insertUser()
+    - updateUser()
+    - deleteUser()
+    - selectUser()
+    - insertUserDisplayOption()
+    - updateUserDisplayOption()
+    - deleteUserDisplayOption()
+    - selectUserDisplayOption()
+}
+
+class Party{
+    {field} partyId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} userid :int(6) NOT NULL
+    {field} partyInfo :VARCHAR(255) NOT NULL
+    {field} location :VARCHAR(100) NOT NULL
+    {field} - reg_date :IMESTAMP
+    {method} - countcheck_wishlists()
+    selectparty()
+    insertparty()
+    updateparty()
+    deleteparty()
+}
+class Wishlist{
+    {field} wlId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
+    {field} partyId :nt(6) NOT NULL
+    {field} userid :int(6) NOT NULL
+    {field} wlInfo :VARCHAR(255) NOT NULL
+    {field} - reg_date :TIMESTAMP
+    insertlist()
+    updatelist()
+    deletelist()
+    selectlist()
+}
+
+
+package "database" {
+    abstract DB{
+        - connect : configdb
+        - updatedb: dbupdate
+        - connect()
+        insert()
+        update()
+        delete()
+        select()
+    }
+    interface configdb{
+        # user : text
+        # pwd : password
+        # host: text
+        # databasename : text
+    }
+    interface dbupdate {
+        {field} # lastupdate :int(6) NOT NULL
+        {field} # reg_date :TIMESTAMP
+        # checkUpdateStatus()
+        # executeUpdate()
+        # changeLastupdate()
+    }
+    configdb <|.. DB
+    dbupdate <|.. DB
+
+}
+
+DB <|.. User
+DB <|.. Party
+DB <|.. Wishlist
+User "1" - - "0..*" Party : participatePartyList
+Party "1" -right- "1" Wishlist : userPartyCombination
+User "1" - - "*" Wishlist : changeWishlist
+
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 18:18:59 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_112-b15
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: nl
+Country: NL
+-->
+    </g>
+</svg>
