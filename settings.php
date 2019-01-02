@@ -6,5 +6,5 @@ function __autoload($class_name) {
 }
 
 function debuginfo($array){
-    var_dump(print_r("<pre>".print_r($_POST,true)."</pre>"));
+    var_dump(print_r("<pre>".print_r($array,true)."</pre>"));
 }

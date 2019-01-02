@@ -1,5 +1,6 @@
 <?php
 include_once '../settings.php';
+include_once '../config.php';
 if(array_key_exists('submit', $_POST)){
     include_once 'DB_install.php';
     $formDBsettings=array();
@@ -7,7 +8,7 @@ if(array_key_exists('submit', $_POST)){
         if($key == 'db_pw'){
             $formDBsettings[$key]=$value;
         }else{
-            $formDBsettings[$key]=clean($value);
+            $formDBsettings[$key]=$value;
         }
     }
     install($formDBsettings);
@@ -25,9 +26,14 @@ if(array_key_exists('submit', $_POST)){
     <header><h1><?php echo t('Installation scripts');?></h1></header>
     <section>
         <form action='install.php' method="post">
+            <label><?php echo t('Database type');?> : </label><select name='db_type'>
+                <option value="mysql">mysql</option>
+                <option value="pgsql">pgsql</option>
+            </select><br />
             <label><?php echo t('Database user');?> : </label><input type='text' name='db_user'><br />
             <label><?php echo t('User password');?> : </label><input type='text' name='db_pw'><br />
             <label><?php echo t('Host');?> : </label><input type='text' name='host'><br />
+            <label><?php echo t('Port');?> : </label><input type='text' name='port'><br />
             <label><?php echo t('Database name');?> : </label><input type='text' name='database'><br />
             <input type='submit' name='submit'>
         </form>

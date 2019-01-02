@@ -1,19 +1,24 @@
 <?php
-include_once 'modules/translation.php';
+//include_once 'settings.php';
 class DB {
     protected $conn;
-    protected $db_check=true;
-    protected $dbUser;
-    protected $userPW;
-    protected $dbname;
-    protected $hostname;
-    protected $tableList;
+    protected $db_check=false;
+    public $dbUser;
+    public $userPW;
+    public $dbname;
+    public $dbtype;
+    public $hostname;
+    public $port;
+    public $tableList;
+    public $createdb = 'no';
     
     function __construct() {
         $this->dbUser='';
         $this->userPW='';
         $this->dbname='';
+        $this->dbtype='';
         $this->hostname = '';
+        $this->port = '';
         $this->tableList=array();
     }
     function select($settings){
@@ -46,42 +51,69 @@ class DB {
     
     private function connect(){
         include_once 'DB_install.php';
-        include_once 'config.php';
+        require_once '../config.php';
         $conn='';
-        $db_check=true;
+        
+        $dbstring = '';
         $database = config();
-        $this->dbname = $database['database'];
-        $this->dbUser = $database['db_user'];
-        $this->userPW = $database['db_pw'];
-        $this->hostname = $database['host'];
-    try {
-        $conn = new PDO("mysql:host=$this->hostname;dbname=$this->dbname", $this->dbUser, $this->userPW);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //echo t("Connected successfully"); 
-        $this->conn = $conn;
-    }
-    catch(PDOException $e)
-        {
-        echo t("Connection failed: ") . $e->getMessage();
+        if($database['db_user']==''){
+            $formDBsettings=array();
+            foreach ($_POST as $key => $value) {
+                $formDBsettings[$key]=$value;
+            }
+            $database = $formDBsettings;
         }
-    return $conn;
+        $dbstring .= $database['db_type'].':';
+        $dbstring .= 'host='.$database['host'];
+        if($database['db_type'] == 'mysql'){
+            if($this->createdb != 'yes'){$dbstring .= ';dbname='.$this->dbname;}
+        }
+        if($database['db_type'] == 'pgsql'){
+            $dbstring .= ';port='. $this->port;
+            $dbstring .= ';user='. $this->dbUser;
+            $dbstring .= ';password='. $this->userPW;
+            if($this->createdb != 'yes'){$dbstring .= ';dbname='.$this->dbname ;}
+        }
+    try {
+            if($database['db_type'] == 'mysql'){
+                $conn = new PDO($dbstring,$this->dbUser, $this->userPW);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $this->db_check=$conn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+            }
+            if($database['db_type'] == 'pgsql'){
+                $conn = new PDO($dbstring);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $this->db_check=$conn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+            }
+            
+        }
+        catch(PDOException $e)
+            {
+            echo "Connection failed: " . $e->getMessage();
+            }
+        return $conn;
+    }
+    function create(){
+        $this->createdb();
+        $this->createTables();
     }
     function createdb(){
         try {
-            $conn = new PDO("mysql:host=$this->hostname", $this->dbUser, $this->userPW);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->createdb='yes';
+            $conn = DB::connect();
             $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
             $conn->exec($sql);
-            echo t("Database created successfully<br>");
+            echo "Database created successfully<br>";
             $conn = null;
+            $this->createdb='no';
             }
         catch(PDOException $e)
             {
-            echo t("createdb : ").$sql . "<br>" . $e->getMessage();
+            echo "createdb : ".$sql . "<br>" . $e->getMessage();
             }
     }
     function createTables(){
-        $conn = $this->connect();
+        $conn = DB::connect();
         foreach ($this->tableList['table_list'] as $key => $value) {
             try{
                 $conn->exec($value);

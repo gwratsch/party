@@ -1,15 +1,19 @@
 <?php
 function install($formDBsettings){
     require 'DB.class.php';
+    updateConfig($formDBsettings);
     $dbinstall = new DB();
     $dbinstall->dbUser=$formDBsettings['db_user'];
     $dbinstall->userPW=$formDBsettings['db_pw'];
     $dbinstall->dbname=$formDBsettings['database'];
+    $dbinstall->dbtype=$formDBsettings['db_type'];
     $dbinstall->hostname=$formDBsettings['host'];
-    $dbinstall->createdb();
+    $dbinstall->port=$formDBsettings['port'];
     $dbinstall->tableList = tablelist();
-    $dbinstall->createTables();
-    updateConfig($formDBsettings);
+    $dbinstall->create();
+    //$dbinstall->createdb();
+    //$dbinstall->createTables();
+    
 }
 function tablelist(){
 $tableInfo = array();    
