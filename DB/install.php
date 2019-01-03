@@ -29,7 +29,6 @@ if(array_key_exists('submit', $_POST)){
             <label><?php echo t('Database type');?> : </label><select id="DbType" name='db_type' onclick="selectDbType()">
                 <?php 
                     $pdoDrivers = (PDO::getAvailableDrivers());
-                    var_dump($pdoDrivers);
                     $count=0;
                     $defaultDbType='';
                     foreach ($pdoDrivers as $key => $value) {

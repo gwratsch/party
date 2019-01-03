@@ -11,13 +11,10 @@ function selectDbType(){
     var portinputClassList = document.getElementsByClassName("portinput");
     var portDisplay = portinputClassList[0].style.display;
     if(portDisplay != displayPortField ){
-        for(i=0;i <= portinputClassList.length; i++){
-            alert('input class: id= '+i+' :array= '+portinputClassList[i])
+        for(i=0;i <= portinputClassList.length-1; i++){
             portinputClassList[i].style.display = displayPortField;
             portinputClassList[i].required = inputIsRequired;
-        }
-        for(il=0;il <= portlabelClassList.length; il++){
-            portlabelClassList[il].style.display = displayPortField;
+            portlabelClassList[i].style.display = displayPortField;
         }
     }
 }
