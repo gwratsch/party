@@ -1,5 +1,5 @@
 function selectDbType(){
-    var dbtype = document.getElementById('DbType').value;
+    var dbtype = document.getElementById("DbType").value;
     var displayPortField = 'none';
     var inputIsRequired = false;
     if(dbtype == 'pgsql'){
@@ -7,8 +7,8 @@ function selectDbType(){
         inputIsRequired = true;
     }
 
-    var portlabelClassList = document.getElementsByClassName('portlabel');
-    var portinputClassList = document.getElementsByClassName('portinput');
+    var portlabelClassList = document.getElementsByClassName("portlabel");
+    var portinputClassList = document.getElementsByClassName("portinput");
     var portDisplay = portinputClassList[0].style.display;
     if(portDisplay != displayPortField ){
         for(i=0;i <= portinputClassList.length; i++){
