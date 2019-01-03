@@ -16,6 +16,7 @@ if(array_key_exists('submit', $_POST)){
     </head>
     <body>
         <?php 
+        $title="Party";
         include 'templates/header.php';
         include 'templates/navigation.php';
         ?>

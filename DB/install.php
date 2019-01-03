@@ -18,12 +18,17 @@ if(array_key_exists('submit', $_POST)){
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php 
+        include 'templates/head.php';
+        ?>
     <title>Party lists</title>
 </head>
 <body>
-    <header><h1><?php echo t('Installation scripts');?></h1></header>
+        <?php 
+        $title="Installation scripts";
+        include 'templates/header.php';
+        include 'templates/navigation.php';
+        ?>
     <section>
         <form action='install.php' method="post">
             <label><?php echo t('Database type');?> : </label><select id="DbType" name='db_type' onclick="selectDbType()">
