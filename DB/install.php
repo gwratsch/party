@@ -35,7 +35,7 @@ if(array_key_exists('submit', $_POST)){
                     foreach ($pdoDrivers as $key => $value) {
                         $dirverslist=array('mysql','pgsql');
                         if( in_array ($value,$dirverslist)){
-                            if($count==0){$defaultDbType=$value;}
+                            if($count==0){$defaultDbType=$value;$count=1;}
                             echo '<option value="'.$value.'">'.$value.'</option>';
                         }
                     }
@@ -47,7 +47,6 @@ if(array_key_exists('submit', $_POST)){
             <?php
             $displayValue = 'none';
             $requiredInput ='';
-            echo $defaultDbType;
             if($defaultDbType == 'pgsql'){$displayValue = 'block';$requiredInput = "required";}
             echo '<label class="portlabel" style="display:'.$displayValue.'" >'.t("Port").': </label><input class="portinput" style="display:'.$displayValue.'" type="text" name="port" '.$requiredInput.'>';
             if($displayValue == 'block'){echo '<br />';}
