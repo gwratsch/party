@@ -11,7 +11,7 @@ function selectDbType(){
     var portinputClassList = document.getElementsByClassName('portinput');
     var portDisplay = portinputClassList[0].style.display;
     if(portDisplay != displayPortField ){
-        for(i=0;i <= portClassList.length; i++){
+        for(i=0;i <= portinputClassList.length; i++){
             portlabelClassList[i].style.display = displayPortField;
             portinputClassList[i].style.display = displayPortField;
             portinputClassList[i].required = inputIsRequired;
