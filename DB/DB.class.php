@@ -1,5 +1,4 @@
 <?php
-//include_once 'settings.php';
 class DB {
     protected $conn;
     protected $db_check=false;
@@ -10,7 +9,7 @@ class DB {
     public $hostname;
     public $port;
     public $tableList;
-    public $createdb = 'no';
+    public $createdb = 'yes';
     
     function __construct() {
         $this->dbUser='';
@@ -50,10 +49,7 @@ class DB {
     }
     
     private function connect(){
-        include_once 'DB_install.php';
-        require_once '../config.php';
-        $conn='';
-        
+        include_once '../config.php';
         $dbstring = '';
         $database = config();
         if($database['db_user']==''){
@@ -63,29 +59,54 @@ class DB {
             }
             $database = $formDBsettings;
         }
+        $this->dbname = $database['database'];
+        $this->type = $database['db_type'];
+        switch ($this->type) {
+            case 'mysql':
+                return $this->connectToMysql($database);
+                break;
+            case 'pgsql':
+                return $this->connectToPgsql($database);
+                break;
+            default:
+                break;
+        }
+
+    }
+    function connectToMysql($database){
+        $dbstring = '';
         $dbstring .= $database['db_type'].':';
         $dbstring .= 'host='.$database['host'];
-        if($database['db_type'] == 'mysql'){
-            if($this->createdb != 'yes'){$dbstring .= ';dbname='.$this->dbname;}
+        if($this->createdb == 'yes'){
+            $dbstring .= ';dbname='.$database['database'];
         }
-        if($database['db_type'] == 'pgsql'){
-            $dbstring .= ';port='. $this->port;
-            $dbstring .= ';user='. $this->dbUser;
-            $dbstring .= ';password='. $this->userPW;
-            if($this->createdb != 'yes'){$dbstring .= ';dbname='.$this->dbname ;}
-        }
+
     try {
             if($database['db_type'] == 'mysql'){
-                $conn = new PDO($dbstring,$this->dbUser, $this->userPW);
+                $conn = new PDO($dbstring,$database['db_user'], $database['db_pw']);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $this->db_check=$conn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
             }
-            if($database['db_type'] == 'pgsql'){
-                $conn = new PDO($dbstring);
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $this->db_check=$conn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+        }
+        catch(PDOException $e)
+            {
+            echo "Connection failed: " . $e->getMessage();
             }
-            
+        return $conn;
+    }
+    function connectToPgsql($database){
+        $dbstring = '';
+        $dbstring .= $database['db_type'].':';
+        $dbstring .= 'host='.$database['host'];
+        $dbstring .= ';port='. $database['port'];
+        $dbstring .= ';user='. $database['db_user'];
+        $dbstring .= ';password='. $database['db_pw'];
+        if($this->createdb == 'yes'){$dbstring .= ';dbname='.$database['database'] ;}
+
+    try {
+            $conn = new PDO($dbstring);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->db_check=$conn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
         }
         catch(PDOException $e)
             {
@@ -98,14 +119,14 @@ class DB {
         $this->createTables();
     }
     function createdb(){
+        $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
         try {
-            $this->createdb='yes';
+            $this->createdb='no';
             $conn = DB::connect();
-            $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
             $conn->exec($sql);
             echo "Database created successfully<br>";
             $conn = null;
-            $this->createdb='no';
+            $this->createdb='yes';
             }
         catch(PDOException $e)
             {

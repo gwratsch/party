@@ -19,7 +19,7 @@ function tablelist(){
 $tableInfo = array();    
 $tableInfo['rebuild_tables'] = false;
 $tableInfo['table_list'] = array(
-    "user"=>"CREATE TABLE user (
+    "user"=>"CREATE TABLE IF NOT EXISTS user (
     userId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
@@ -30,7 +30,7 @@ $tableInfo['table_list'] = array(
     user_info VARCHAR(255),
     reg_date TIMESTAMP
     )",
-    "userdisplay"=>"CREATE TABLE userdisplay (
+    "userdisplay"=>"CREATE TABLE IF NOT EXISTS userdisplay (
     UDid INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     userId INT(6) NOT NULL,
     fieldname VARCHAR(30) NOT NULL
@@ -58,18 +58,18 @@ function updateConfig($formDBsettings){
 // save in the database the last executed update key
 function updateDB(){
     $updateScripts= array(
-        "1"=>"CREATE TABLE dbconfig (
+        "1"=>"CREATE TABLE IF NOT EXISTS dbconfig (
     lastupdate int(6) NOT NULL,
     reg_date TIMESTAMP
     )",
-        "2"=>"CREATE TABLE party (
+        "2"=>"CREATE TABLE IF NOT EXISTS party (
     partyId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     userid int(6) NOT NULL,
     partyInfo VARCHAR(255) NOT NULL,
     location VARCHAR(100) NOT NULL,
     reg_date TIMESTAMP
     )",
-        "3"=>"CREATE TABLE wishlist (
+        "3"=>"CREATE TABLE IF NOT EXISTS wishlist (
     wlId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     partyId int(6) NOT NULL,
     userid int(6) NOT NULL,
