@@ -23,7 +23,7 @@ class DB_install extends  DB{
         $tableInfo = array();    
         $tableInfo['rebuild_tables'] = false;
         $tableInfo['table_list'] = array(
-            "user"=>"CREATE TABLE IF NOT EXISTS user (
+            "users"=>"CREATE TABLE IF NOT EXISTS users (
             userId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
             firstname VARCHAR(30) NOT NULL,
             lastname VARCHAR(30) NOT NULL,
