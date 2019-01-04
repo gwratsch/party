@@ -100,7 +100,7 @@ class DB {
         $dbstring .= 'host='.$database['host'];
         $dbstring .= ';port='. $database['port'];
         if($this->createdb == 'yes'){$dbstring .= ';dbname='.$database['database'] ;}
-        if($this->createdb == 'no'){$dbstring .= ';dbname=""' ;}
+        if($this->createdb == 'no'){$dbstring .= ';dbname=' ;}
         $dbstring .= ';user='. $database['db_user'];
         $dbstring .= ';password='. $database['db_pw'];
         
