@@ -95,17 +95,30 @@ class DB {
         return $conn;
     }
     function connectToPgsql($database){
+        /** using Heroku connection options to test the connection.
         $dbstring = '';
         $dbstring .= $database['db_type'].':';
         $dbstring .= 'host='.$database['host'];
         $dbstring .= ';port='. $database['port'];
         if($this->createdb == 'yes'){$dbstring .= ';dbname='.$database['database'] ;}
-        if($this->createdb == 'no'){$dbstring .= ';dbname=' ;}
+        if($this->createdb == 'no'){$dbstring .= ';dbname= ' ;}
         $dbstring .= ';user='. $database['db_user'];
         $dbstring .= ';password='. $database['db_pw'];
-        
+         * 
+         */
+            $dbst = parse_url(getenv("DATABASE_URL"));
+
+            
     try {
-            $conn = new PDO($dbstring);
+            //$conn = new PDO($dbstring);
+                $conn = new PDO("pgsql:" . sprintf(
+                    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+                    $dbst["host"],
+                    $dbst["port"],
+                    $dbst["user"],
+                    $dbst["pass"],
+                    ltrim($dbst["path"], "/")
+                ));
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->db_check=$conn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
         }
