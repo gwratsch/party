@@ -8,5 +8,6 @@ function config(){
         'port' => '',
         'host' => ''
     );
+    
     return $database;
 }
