@@ -49,7 +49,7 @@ class DB {
     }
     
     private function connect(){
-        include_once '../config.php';
+        include_once 'config.php';
         $dbstring = '';
         $database = config();
         if($database['db_user']==''){

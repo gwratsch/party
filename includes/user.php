@@ -1,5 +1,4 @@
 <?php
-include_once 'DB/DB.class.php';
 include_once 'settings.php';
 
 class user {
@@ -67,7 +66,6 @@ class user {
          );
     }
     public function save(){
-        //$tablename="user";
         $security = new security();
         $result = $_POST;
         
@@ -86,8 +84,6 @@ class user {
             }
         }
         $userid = $this->userid;
-        //debuginfo($_POST);
-        //debuginfo($this);
         if($userid['content']==0){
             $userid['content'] = $this->insert();
             $this->userid = $userid;

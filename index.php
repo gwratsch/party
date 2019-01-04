@@ -3,7 +3,7 @@ include_once 'config.php';
 $page= 'user.php';
 $database = config();
 if($database['database'] == ''){
-    $page = 'DB/install.php';
+    $page = 'install.php';
 }
 ?>
 <!DOCTYPE html>

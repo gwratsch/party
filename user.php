@@ -1,8 +1,9 @@
 <?php
 include_once 'settings.php';
+$path = configsettings::pathname();
 $user = new user();
+$pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){
-    //include_once 'includes/user.class.php';
     $user->save();
 }    
 ?>
@@ -10,15 +11,15 @@ if(array_key_exists('submit', $_POST)){
 <html lang="nl">
     <head>
         <?php 
-        include 'templates/head.php';
+        echo $pagetemplate->head();
         ?>
         <title>partyList</title>
     </head>
     <body>
         <?php 
-        $title="Party";
-        include 'templates/header.php';
-        include 'templates/navigation.php';
+        $pagetemplate->title="Party";
+        echo $pagetemplate->header();
+        echo $pagetemplate->navigation();
         ?>
         <section class="container">
             <h2><?php echo t("User settings");?></h2>

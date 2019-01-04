@@ -1,6 +1,6 @@
 body{
     padding:20px;
-    background: url('/site/image/workInProgress_laptop3.jpg') no-repeat;
+    background: url('/site/image/workInProgress_laptop4.jpg') no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -20,14 +20,23 @@ section img{
     
 }
 form div{
-    width: 100px;
+    width: 130px;
     display: inline-block;
 }
-form input.form-control, form textarea.form-control{
+form input.form-control, form textarea.form-control, form select.form-control{
     margin-left: 20px;
     margin-right: 20px;
     width: 300px;
     display: inline-block;
+}
+nav a, nav a:hover{
+    color: white;
+}
+#bodyinstall nav a{
+    display: none;
+}
+#bodyinstall nav{
+        min-height: 40px;
 }
 @media (min-width: 768px){
     .modal-open .modal-dialog {
