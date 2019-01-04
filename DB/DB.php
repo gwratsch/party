@@ -99,10 +99,10 @@ class DB {
         $dbstring .= $database['db_type'].':';
         $dbstring .= 'host='.$database['host'];
         $dbstring .= ';port='. $database['port'];
+        if($this->createdb == 'yes'){$dbstring .= ';dbname='.$database['database'] ;}
         $dbstring .= ';user='. $database['db_user'];
         $dbstring .= ';password='. $database['db_pw'];
-        if($this->createdb == 'yes'){$dbstring .= ';dbname='.$database['database'] ;}
-
+        
     try {
             $conn = new PDO($dbstring);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
