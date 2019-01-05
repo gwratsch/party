@@ -23,22 +23,8 @@ class DB_install extends  DB{
         $tableInfo = array();    
         $tableInfo['rebuild_tables'] = false;
         $tableInfo['table_list'] = array(
-            "users"=>"CREATE TABLE IF NOT EXISTS users (
-            userid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-            firstname varchar(30) NOT NULL,
-            lastname varchar(30) NOT NULL,
-            adres varchar(50) NOT NULL,
-            city varchar(30) NOT NULL,
-            country varchar(30) NOT NULL,
-            email varchar(50),
-            user_info varchar(255),
-            reg_date timestamp
-            )",
-            "userdisplay"=>"CREATE TABLE IF NOT EXISTS userdisplay (
-            udid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-            userid int(6) NOT NULL,
-            fieldname varchar(30) NOT NULL
-            )"
+            "users"=>"CREATE TABLE IF NOT EXISTS users (userid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,firstname varchar(30) NOT NULL,lastname varchar(30) NOT NULL,adres varchar(50) NOT NULL,city varchar(30) NOT NULL,country varchar(30) NOT NULL,email varchar(50),user_info varchar(255),reg_date timestamp)",
+            "userdisplay"=>"CREATE TABLE IF NOT EXISTS userdisplay (udid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,userid int(6) NOT NULL,fieldname varchar(30) NOT NULL)"
         );
         return $tableInfo;
     }  
