@@ -161,6 +161,10 @@ class DB {
         }
     }function pgsql_exceptions($value){
         $value = str_replace('UNSIGNED AUTO_INCREMENT', 'serial', $value);
+        $value = str_replace('(6)', '', $value);
+        $value = str_replace('(30)', '', $value);
+        $value = str_replace('(50)', '', $value);
+        $value = str_replace('(255)', '', $value);
         return $value;
     }
 }
