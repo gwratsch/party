@@ -24,20 +24,20 @@ class DB_install extends  DB{
         $tableInfo['rebuild_tables'] = false;
         $tableInfo['table_list'] = array(
             "users"=>"CREATE TABLE IF NOT EXISTS users (
-            userId INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-            firstname VARCHAR (30) NOT NULL,
-            lastname VARCHAR (30) NOT NULL,
-            adres VARCHAR (50) NOT NULL,
-            city VARCHAR (30) NOT NULL,
-            country VARCHAR (30) NOT NULL,
-            email VARCHAR (50),
-            user_info VARCHAR (255),
-            reg_date TIMESTAMP
+            userId int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+            firstname varchar(30) NOT NULL,
+            lastname varchar(30) NOT NULL,
+            adres varchar(50) NOT NULL,
+            city varchar(30) NOT NULL,
+            country varchar(30) NOT NULL,
+            email varchar(50),
+            user_info varchar(255),
+            reg_date timestamp
             )",
             "userdisplay"=>"CREATE TABLE IF NOT EXISTS userdisplay (
-            UDid INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-            userId INT (6) NOT NULL,
-            fieldname VARCHAR (30) NOT NULL
+            UDid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+            userId int(6) NOT NULL,
+            fieldname varchar(30) NOT NULL
             )"
         );
         return $tableInfo;
@@ -65,21 +65,21 @@ class DB_install extends  DB{
         $updateScripts= array(
             "1"=>"CREATE TABLE IF NOT EXISTS dbconfig (
         lastupdate int(6) NOT NULL,
-        reg_date TIMESTAMP
+        reg_date timestamp
         )",
             "2"=>"CREATE TABLE IF NOT EXISTS party (
-        partyId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        partyId int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
         userid int(6) NOT NULL,
-        partyInfo VARCHAR(255) NOT NULL,
-        location VARCHAR(100) NOT NULL,
-        reg_date TIMESTAMP
+        partyInfo varchar(255) NOT NULL,
+        location varchar(100) NOT NULL,
+        reg_date timestamp
         )",
             "3"=>"CREATE TABLE IF NOT EXISTS wishlist (
-        wlId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        wlId int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
         partyId int(6) NOT NULL,
         userid int(6) NOT NULL,
-        wlInfo VARCHAR(255) NOT NULL,
-        reg_date TIMESTAMP
+        wlInfo varchar(255) NOT NULL,
+        reg_date timestamp
         )"
         );
         return $updateScripts;
