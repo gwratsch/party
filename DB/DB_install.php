@@ -24,7 +24,7 @@ class DB_install extends  DB{
         $tableInfo['rebuild_tables'] = false;
         $tableInfo['table_list'] = array(
             "users"=>"CREATE TABLE IF NOT EXISTS users (
-            userId int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+            userid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
             firstname varchar(30) NOT NULL,
             lastname varchar(30) NOT NULL,
             adres varchar(50) NOT NULL,
@@ -35,8 +35,8 @@ class DB_install extends  DB{
             reg_date timestamp
             )",
             "userdisplay"=>"CREATE TABLE IF NOT EXISTS userdisplay (
-            UDid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-            userId int(6) NOT NULL,
+            udid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+            userid int(6) NOT NULL,
             fieldname varchar(30) NOT NULL
             )"
         );
@@ -68,17 +68,17 @@ class DB_install extends  DB{
         reg_date timestamp
         )",
             "2"=>"CREATE TABLE IF NOT EXISTS party (
-        partyId int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        partyid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
         userid int(6) NOT NULL,
-        partyInfo varchar(255) NOT NULL,
+        partyinfo varchar(255) NOT NULL,
         location varchar(100) NOT NULL,
         reg_date timestamp
         )",
             "3"=>"CREATE TABLE IF NOT EXISTS wishlist (
-        wlId int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-        partyId int(6) NOT NULL,
+        wlid int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+        partyid int(6) NOT NULL,
         userid int(6) NOT NULL,
-        wlInfo varchar(255) NOT NULL,
+        wlinfo varchar(255) NOT NULL,
         reg_date timestamp
         )"
         );
