@@ -60,8 +60,8 @@ class DB {
             $database = $formDBsettings;
         }
         $this->dbname = $database['database'];
-        $this->type = $database['db_type'];
-        switch ($this->type) {
+        $this->dbtype = $database['db_type'];
+        switch ($this->dbtype) {
             case 'mysql':
                 return $this->connectToMysql($database);
                 break;
@@ -151,6 +151,7 @@ class DB {
         $conn = DB::connect();
         foreach ($this->tableList['table_list'] as $key => $value) {
             try{
+                if($this->dbtype == 'pgsql'){$value = $this->pgsql_exceptions($value);}
                 $conn->exec($value);
                 }
             catch(PDOException $e)
@@ -158,5 +159,8 @@ class DB {
                 echo $value . "<br>" . $e->getMessage();
                 }
         }
+    }function pgsql_exceptions($value){
+        $value = str_replace('UNSIGNED AUTO_INCREMENT', 'serial', $value);
+        return $value;
     }
 }
