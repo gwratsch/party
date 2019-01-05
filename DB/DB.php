@@ -160,7 +160,7 @@ class DB {
                 }
         }
     }function pgsql_exceptions($value){
-        $value = str_replace('UNSIGNED AUTO_INCREMENT', 'SERAIL', $value);
+        $value = str_replace('int(6) UNSIGNED AUTO_INCREMENT', 'SERAIL', $value);
         $value = str_replace('(6)', '', $value);
         $value = str_replace('(30)', '', $value);
         $value = str_replace('(50)', '', $value);
