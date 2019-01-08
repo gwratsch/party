@@ -1,21 +1,25 @@
 <?php
-
-class DB_install extends  DB{
+include_once 'settings.php';
+class DB_install{
     
     function installdb() {
         $formDBsettings=array();
         foreach ($_POST as $key => $value) {
             $formDBsettings[$key]=$value;
         }
-        self::updateConfig($formDBsettings);
-        $dbinstall = new DB();
-        $dbinstall->dbUser=$formDBsettings['db_user'];
-        $dbinstall->userPW=$formDBsettings['db_pw'];
-        $dbinstall->dbname=$formDBsettings['database'];
-        $dbinstall->dbtype=$formDBsettings['db_type'];
-        $dbinstall->hostname=$formDBsettings['host'];
+        
+        (new DB_install)->updateConfig($formDBsettings);
+        $databasetype = $formDBsettings['dbtype'];
+        $dbinstall = new $databasetype();
+        
+        $dbinstall->dbUser=$formDBsettings['dbUser'];
+        $dbinstall->userPW=$formDBsettings['userPW'];
+        $dbinstall->dbname=$formDBsettings['dbname'];
+        $dbinstall->dbtype=$formDBsettings['dbtype'];
+        $dbinstall->host=$formDBsettings['host'];
         $dbinstall->port=$formDBsettings['port'];
-        $dbinstall->tableList = self::tablelist();
+        $tablelist = (new DB_install)->tablelist();
+        $dbinstall->tableList = $tablelist;
         $dbinstall->create();
     }
     
@@ -31,6 +35,9 @@ class DB_install extends  DB{
 
     function updateConfig($formDBsettings){
         $filename = "config.php";
+        if(!file_exists($filename)){
+            echo 'Bestand config niet gevonden.';
+        }
         $configFile = fopen($filename, "r");
         $filesize = fstat($configFile);
         $content = fread($configFile, $filesize[7]);
@@ -41,6 +48,7 @@ class DB_install extends  DB{
             $content = str_replace($string, $replacestring, $content);
         }
         $configFile = fopen($filename, "w");
+        //var_dump(print_r("2:<pre>".print_r($content,true)."</pre>"));
         fwrite($configFile, $content);
         fclose($configFile);
     }

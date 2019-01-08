@@ -2,7 +2,7 @@
 include_once 'config.php';
 $page= 'user.php';
 $database = config();
-if($database['database'] == ''){
+if($database['dbname'] == ''){
     $page = 'install.php';
 }
 ?>

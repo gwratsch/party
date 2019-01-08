@@ -1,12 +1,12 @@
 <?php
 function config(){
     $database = array(
-        'db_user' => '',
-        'db_pw' => '',
-        'database' => '',
-        'db_type' => '',
+        'dbUser' => 'admin',
+        'userPW' => 'bgt5BGT%',
+        'dbname' => 'Party91',
+        'dbtype' => 'mysql',
         'port' => '',
-        'host' => ''
+        'host' => 'localhost'
     );
     
     return $database;

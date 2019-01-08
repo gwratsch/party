@@ -1,13 +1,17 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
+    actor administrator
     actor visitor
-
-rectangle registration{
-    visitor - (user registratie)
+    
+rectangle system{
+    (database) <|. (install)
+    administrator - (install)
     (user registratie) .|>  (database)
+    visitor - (user registratie)
     visitor - (wishlist)
     (wishlist) -|> (user registratie)
+    (database) <|. (wishlist)
 }
 note bottom of visitor
     Aannamen: De bezoeker gebruikt de nieuwste browser versie

@@ -1,6 +1,6 @@
 <?php
 include_once 'settings.php';
-$path = configsettings::pathname();
+$path = (new configsettings)->pathname();
 $user = new user();
 $pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){

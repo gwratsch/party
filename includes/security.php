@@ -20,6 +20,9 @@ class security {
                 $pattern = "[A-Za-z0-9]*$";
                 return $this->setResult($pattern, $str);
                 break;
+            case "textarea":
+                return $str;
+                break;
             case "voorletters":
                 $pattern = "^[A-Z.]+$";
                 return $this->setResult($pattern, $str);

@@ -1,6 +1,46 @@
 @startuml
 skinparam classAttributeIconSize 0
 
+package "database" {
+    class DB{
+        - connect : configdb
+        - updatedb: dbupdate
+        - connect()
+        insert()
+        update()
+        delete()
+        select()
+    }
+    interface config{
+        # user : text
+        # pwd : password
+        # host: text
+        # databasename : text
+        # databasetype : text
+    }
+    class dbupdate {
+        {field} # lastupdate :int(6) NOT NULL
+        {field} # reg_date :TIMESTAMP
+        # checkUpdateStatus()
+        # executeUpdate()
+        # changeLastupdate()
+    }
+    class mysql {
+        connect()
+        sql_exceptions()
+        checkDBisCreated()
+    }
+    class pgsql {
+        connect()
+        sql_exceptions()
+        checkDBisCreated()
+    }
+    config -- DB
+    dbupdate -- DB
+    DB <|.. mysql
+    DB <|.. pgsql
+
+}
 class User{
     {field} userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
     {field} firstname :VARCHAR(30) NOT NULL
@@ -59,37 +99,9 @@ interface security{
     removeHtmlTag()
 }
 
-package "database" {
-    abstract DB{
-        - connect : configdb
-        - updatedb: dbupdate
-        - connect()
-        insert()
-        update()
-        delete()
-        select()
-    }
-    interface configdb{
-        # user : text
-        # pwd : password
-        # host: text
-        # databasename : text
-    }
-    interface dbupdate {
-        {field} # lastupdate :int(6) NOT NULL
-        {field} # reg_date :TIMESTAMP
-        # checkUpdateStatus()
-        # executeUpdate()
-        # changeLastupdate()
-    }
-    configdb <|.. DB
-    dbupdate <|.. DB
-
-}
-
-DB <|.. User
-DB <|.. Party
-DB <|.. Wishlist
+User -- database
+Wishlist -- database
+Party -- database
 User "1" -- "0..*" Party : participatePartyList
 Party "1" -right- "1" Wishlist : userPartyCombination
 User "1" -- "*" Wishlist : changeWishlist

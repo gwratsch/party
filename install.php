@@ -3,7 +3,7 @@ include_once 'settings.php';
 $path = configsettings::pathname();
 $pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){
-    DB_install::installdb();
+    (new DB_install)->installdb();
     echo '<a href="/user.php">'.t('Naar user page').'</a>';
 }
 ?>
@@ -11,7 +11,7 @@ if(array_key_exists('submit', $_POST)){
 <html lang="nl">
 <head>
         <?php 
-        echo pagetemplate::head();
+        echo $pagetemplate->head();
         ?>
     <title>Party lists</title>
 </head>
@@ -24,7 +24,7 @@ if(array_key_exists('submit', $_POST)){
     <section class="container">
         <h2><?php echo t("Database settings");?></h2>
         <form action='install.php' method="post" class="form-horizontal">
-            <div><label><?php echo t('Database type');?> </label>: </div><select id="DbType" class="form-control" name='db_type' onclick="selectDbType()">
+            <div><label><?php echo t('Database type');?> </label>: </div><select id="DbType" class="form-control" name='dbtype' onclick="selectDbType()">
                 <?php 
                     $pdoDrivers = (PDO::getAvailableDrivers());
 
@@ -39,8 +39,8 @@ if(array_key_exists('submit', $_POST)){
                     }
                 ?>
             </select><br />
-            <div><label><?php echo t('Database user');?></label>: </div><input type='text' name='db_user' class="form-control" required><br />
-            <div><label><?php echo t('User password');?></label>: </div><input type='text' name='db_pw' class="form-control" required><br />
+            <div><label><?php echo t('Database user');?></label>: </div><input type='text' name='dbUser' class="form-control" required><br />
+            <div><label><?php echo t('User password');?></label>: </div><input type='text' name='userPW' class="form-control" required><br />
             <div><label><?php echo t('Host');?> </label>: </div><input type='text' name='host' class="form-control" required><br />
             <?php
             $displayValue = 'none';
@@ -50,7 +50,7 @@ if(array_key_exists('submit', $_POST)){
             if($displayValue == 'block'){echo '<br />';}
             ?>
                 
-            <div><label><?php echo t('Database name');?> </label>: </div><input type='text' name='database' class="form-control" required><br />
+            <div><label><?php echo t('Database name');?> </label>: </div><input type='text' name='dbname' class="form-control" required><br />
             <input type='submit' name='submit'>
         </form>
     </section>
