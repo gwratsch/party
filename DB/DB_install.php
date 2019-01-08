@@ -35,34 +35,25 @@ class DB_install{
 
     function updateConfig($formDBsettings){
         $filename = "config.php";
-        if(!file_exists($filename)){
-            echo 'Bestand config niet gevonden.';
+        if(file_exists($filename)){
+            $configFile = fopen($filename, "r");
+            $filesize = fstat($configFile);
+            $content = fread($configFile, $filesize[7]);
+            fclose($configFile);
+            foreach($formDBsettings as $key=>$value){
+                $string = "'".$key."' => ''";
+                $replacestring = "'".$key."' => '".$value."'";
+                $content = str_replace($string, $replacestring, $content);
+            }
+            $configFile = fopen($filename, "w");
+            $actionMessage = fwrite($configFile, $content);
+            if($actionMessage == false){
+                echo "Error: writing to config went wrong.";
+            }
+            fclose($configFile);
         }else{
-            echo 'Bestand config gevonden.';
+            echo t('The database settings are not save. This will not work correct.');
         }
-        $configFile = fopen($filename, "r");
-        $filesize = fstat($configFile);
-        $content = fread($configFile, $filesize[7]);
-        var_dump(print_r("1:<pre>".print_r($content,true)."</pre>"));
-        fclose($configFile);
-        foreach($formDBsettings as $key=>$value){
-            $string = "'".$key."' => ''";
-            $replacestring = "'".$key."' => '".$value."'";
-            $content = str_replace($string, $replacestring, $content);
-        }
-        $configFile = fopen($filename, "w");
-        var_dump(print_r("2:<pre>".print_r($content,true)."</pre>"));
-        $actionMessage = fwrite($configFile, $content);
-        if($actionMessage == false){
-            echo "Error: writing to config went wrong.";
-        }
-        fclose($configFile);
-        // extra check if config is changed.
-        $configFile = fopen($filename, "r");
-        $filesize = fstat($configFile);
-        $content = fread($configFile, $filesize[7]);
-        var_dump(print_r("3:<pre>".print_r($content,true)."</pre>"));
-        fclose($configFile);
     }
     // add Database updates in this functions
     // a new function have to add new updates.
