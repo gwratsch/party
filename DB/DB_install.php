@@ -37,6 +37,8 @@ class DB_install{
         $filename = "config.php";
         if(!file_exists($filename)){
             echo 'Bestand config niet gevonden.';
+        }else{
+            echo 'Bestand config gevonden.';
         }
         $configFile = fopen($filename, "r");
         $filesize = fstat($configFile);
@@ -48,8 +50,11 @@ class DB_install{
             $content = str_replace($string, $replacestring, $content);
         }
         $configFile = fopen($filename, "w");
-        //var_dump(print_r("2:<pre>".print_r($content,true)."</pre>"));
-        fwrite($configFile, $content);
+        var_dump(print_r("2:<pre>".print_r($content,true)."</pre>"));
+        $actionMessage = fwrite($configFile, $content);
+        if($actionMessage == false){
+            echo "Error: writing to config went wrong.";
+        }
         fclose($configFile);
     }
     // add Database updates in this functions
