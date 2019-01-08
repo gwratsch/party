@@ -106,7 +106,7 @@ class user {
             $this->jsonFieldList = json_encode($fieldList);
             $this->userDisplayInfo = $this->selectdisplay();
             $userDisplayInfoarray = $this->userDisplayInfo;
-            if(is_array($userDisplayInfoarray) && array_key_exists("udid", $userDisplayInfoarray[0])){
+            if(array_key_exists("0", $userDisplayInfoarray) && array_key_exists("udid", $userDisplayInfoarray[0])){
                 $this->updatedisplay();
             }else{
                 $this->insertdisplay();

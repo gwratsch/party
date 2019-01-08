@@ -9,50 +9,50 @@ class security {
         $str = $this->removeHtmlTag($str);
         switch ($type) {
             case "email":
-                $pattern = "^[0-9a-zA-Z_\.-]{1,}@([0-9a-zA-Z_\-]{1,}\.)+[0-9a-zA-Z_\-]{2,}$";
+                $pattern = "/^[0-9a-zA-Z_\.-]{1,}@([0-9a-zA-Z_\-]{1,}\.)+[0-9a-zA-Z_\-]{2,}$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "firstname":
-                $pattern = "^[A-Za-z. -]+$";
+                $pattern = "/^[A-Za-z. -]+$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "text":
-                $pattern = "[A-Za-z0-9]*$";
+                $pattern = "/[A-Za-z0-9]*$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "textarea":
                 return $str;
                 break;
             case "voorletters":
-                $pattern = "^[A-Z.]+$";
+                $pattern = "/^[A-Z.]+$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "lastname":
-                $pattern = "^[A-Za-z -]+$";
+                $pattern = "/^[A-Za-z -]+$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "adress":
-                $pattern = "^([A-Za-z-])+[0-9]+([a-z0-9 -])*$";
+                $pattern = "/^([A-Za-z-])+[0-9]+([a-z0-9 -])*$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "zipcode":
-                $pattern = "^[1-9][0-9]{3}[ ]?[A-Za-z]{2}$";
+                $pattern = "/^[1-9][0-9]{3}[ ]?[A-Za-z]{2}$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "city":
-                $pattern = "([A-Za-z -])+$";
+                $pattern = "/([A-Za-z -])+$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "phone":
-                $pattern = "^[0-9]{10}$";
+                $pattern = "/^[0-9]{10}$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "banknumber":
-                $pattern = "^[1-9][0-9]{3,}$";
+                $pattern = "/^[1-9][0-9]{3,}$/";
                 return $this->setResult($pattern, $str);
                 break;
             case "number":
-                $pattern = "^[0-9][0-9]*$";
+                $pattern = "/^[0-9][0-9]*$/";
                 return $this->setResult($pattern, $str);
                 break;
             default:
