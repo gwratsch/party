@@ -43,6 +43,7 @@ class DB_install{
         $configFile = fopen($filename, "r");
         $filesize = fstat($configFile);
         $content = fread($configFile, $filesize[7]);
+        var_dump(print_r("1:<pre>".print_r($content,true)."</pre>"));
         fclose($configFile);
         foreach($formDBsettings as $key=>$value){
             $string = "'".$key."' => ''";
@@ -60,7 +61,7 @@ class DB_install{
         $configFile = fopen($filename, "r");
         $filesize = fstat($configFile);
         $content = fread($configFile, $filesize[7]);
-        var_dump(print_r("2:<pre>".print_r($content,true)."</pre>"));
+        var_dump(print_r("3:<pre>".print_r($content,true)."</pre>"));
         fclose($configFile);
     }
     // add Database updates in this functions
