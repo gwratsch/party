@@ -56,6 +56,12 @@ class DB_install{
             echo "Error: writing to config went wrong.";
         }
         fclose($configFile);
+        // extra check if config is changed.
+        $configFile = fopen($filename, "r");
+        $filesize = fstat($configFile);
+        $content = fread($configFile, $filesize[7]);
+        var_dump(print_r("2:<pre>".print_r($content,true)."</pre>"));
+        fclose($configFile);
     }
     // add Database updates in this functions
     // a new function have to add new updates.
