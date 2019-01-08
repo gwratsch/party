@@ -63,7 +63,7 @@ class security {
         return strip_tags($string);
     }
     function setResult($pattern, $str){
-        if(ereg($pattern, $str)){
+        if(preg_match($pattern, $str)){
             $content = $str;
         }else{
             $content= "Dit is geen geldige waarde.";
