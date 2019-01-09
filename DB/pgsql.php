@@ -32,7 +32,7 @@ class pgsql  extends  DB{
     }
     function checkDBisCreated(){
         $conn = $this->connect();
-        $sql_check = 'SELECT 1 FROM pg_database WHERE datname='. $this->dbname;
+        $sql_check = 'SELECT 1 FROM pg_database WHERE datname="'. $this->dbname.'"';
         $this->createdb = $conn->exec($sql_check); 
         var_dump('<br />PGsql checkDBisCreated : <br />');
         var_dump($this->createdb);
@@ -41,10 +41,10 @@ class pgsql  extends  DB{
     function checktableisCreated(){
         $conn = $this->connect();
         $sql_check = 'select column_name, data_type, character_maximum_length
-from INFORMATION_SCHEMA.COLUMNS where table_name = users';
+from INFORMATION_SCHEMA.COLUMNS where table_name = "users"';
         $this->tabelUsers = $conn->exec($sql_check); 
         $sql_check = 'select column_name, data_type, character_maximum_length
-from INFORMATION_SCHEMA.COLUMNS where table_name = userdisplay';
+from INFORMATION_SCHEMA.COLUMNS where table_name = "userdisplay"';
         $this->tabelUserdisplay = $conn->exec($sql_check);
         $sql_check = 'select column_name, data_type, character_maximum_length
 from INFORMATION_SCHEMA.COLUMNS';
