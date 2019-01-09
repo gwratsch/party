@@ -4,6 +4,7 @@ class pgsql  extends  DB{
     public $sql_createDatabase = '';
     public $tabelUsers;
     public $tabelUserdisplay;
+    public $tableslist;
     
     function connect(){
         parent::connect();
@@ -45,6 +46,9 @@ from INFORMATION_SCHEMA.COLUMNS where table_name = users';
         $sql_check = 'select column_name, data_type, character_maximum_length
 from INFORMATION_SCHEMA.COLUMNS where table_name = userdisplay';
         $this->tabelUserdisplay = $conn->exec($sql_check);
+        $sql_check = 'select column_name, data_type, character_maximum_length
+from INFORMATION_SCHEMA.COLUMNS';
+        $this->tableslist = $conn->exec($sql_check);
         $conn = null;
     }
 
