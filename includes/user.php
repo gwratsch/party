@@ -124,9 +124,8 @@ class user {
         $userContent = $this->userid;
         $userid = $userContent['content'];
         $valuesconditions = "userid = ".$userid;
-        if($userid=='*'){$valuesconditions="1";}
+        if($userid=='*'){$valuesconditions="1=1";}
         $sqlsettings['fieldconditions'] = $valuesconditions;
-        //$this->dbtype= $this->databasetype;
         return $this->DBconnect->select($sqlsettings);
     }
     public function insert(){

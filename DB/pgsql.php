@@ -34,8 +34,6 @@ class pgsql  extends  DB{
         $conn = $this->connect();
         $sql_check = 'SELECT 1 FROM pg_database WHERE datname="'. $this->dbname.'"';
         $this->createdb = $conn->exec($sql_check); 
-        var_dump('<br />PGsql checkDBisCreated : <br />');
-        var_dump($this->createdb);
         $conn = null;
     }
     function checktableisCreated(){

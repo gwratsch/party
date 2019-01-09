@@ -33,10 +33,6 @@ class DB {
         $result->execute();
         $resultarray = $result->fetchAll();
         $conn=null;
-        var_dump('<br />DB select sql: <br />');
-        var_dump($sql);
-        var_dump('<br />DB select: <br />');
-        var_dump($resultarray);
         return $resultarray;
     }
     function update($settings){
@@ -54,15 +50,10 @@ class DB {
     function insert($settings){
         $this->checktableisCreated();
         $conn = $this->connect();
-        var_dump('<br />DB insert conn result : <br />');
-        var_dump($conn);
         $sql = "INSERT INTO ".$settings['tablename']." (".$settings['fieldnames'].") VALUES (".$settings['fieldvalues'].");";
         $conn->exec($sql);
         $newUserId =  $conn->lastInsertId();
         $conn=null;
-        var_dump('<br />DB insert created id : <br />');
-        var_dump($sql.'<br />');
-        var_dump($newUserId);
         return $newUserId;
     }
     
