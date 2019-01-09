@@ -50,7 +50,10 @@ class DB {
         $conn=null;
     }
     function insert($settings){
+        $this->checktableisCreated();
         $conn = $this->connect();
+        var_dump('<br />DB insert conn result : <br />');
+        var_dump($conn);
         $sql = "INSERT INTO ".$settings['tablename']." (".$settings['fieldnames'].") VALUES (".$settings['fieldvalues'].");";
         $conn->exec($sql);
         $newUserId =  $conn->lastInsertId();
@@ -103,6 +106,7 @@ class DB {
         }
     }
     function createTables(){
+        $this->checktableisCreated();
         $conn = $this->connect();
         foreach ($this->tableList['table_list'] as $key => $value) {
             try{
