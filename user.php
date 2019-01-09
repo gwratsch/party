@@ -31,6 +31,8 @@ if(array_key_exists('submit', $_POST)){
             <h2><?php echo t("User settings");?></h2>
             <form action="user.php" method="post" class="form-horizontal">
                 <?php
+        var_dump('USER object : ');
+        var_dump($user);
                 $formContent='';
                 foreach ($user as $keyName => $keyContent) {
                     $type = $keyContent['type'];
@@ -67,6 +69,8 @@ if(array_key_exists('submit', $_POST)){
         <?php
         $user->userid['content'] = '*';
         $result = $user->select();
+        var_dump('USER select list : ');
+        var_dump($result);
         echo '<table class="table table-striped"><thead>
       <tr>
         <th>User id</th>

@@ -33,6 +33,8 @@ class DB {
         $result->execute();
         $resultarray = $result->fetchAll();
         $conn=null;
+        var_dump('DB select: ');
+        var_dump($resultarray);
         return $resultarray;
     }
     function update($settings){
@@ -53,6 +55,8 @@ class DB {
         $conn->exec($sql);
         $newUserId =  $conn->lastInsertId();
         $conn=null;
+        var_dump('DB insert created id : ');
+        var_dump($newUserId);
         return $newUserId;
     }
     
