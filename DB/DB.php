@@ -33,7 +33,7 @@ class DB {
         $result->execute();
         $resultarray = $result->fetchAll();
         $conn=null;
-        var_dump('DB select: ');
+        var_dump('<br />DB select: <br />');
         var_dump($resultarray);
         return $resultarray;
     }
@@ -55,7 +55,8 @@ class DB {
         $conn->exec($sql);
         $newUserId =  $conn->lastInsertId();
         $conn=null;
-        var_dump('DB insert created id : ');
+        var_dump('<br />DB insert created id : <br />');
+        var_dump($sql.'<br />');
         var_dump($newUserId);
         return $newUserId;
     }
