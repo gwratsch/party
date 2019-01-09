@@ -33,6 +33,8 @@ class DB {
         $result->execute();
         $resultarray = $result->fetchAll();
         $conn=null;
+        var_dump('<br />DB select sql: <br />');
+        var_dump($sql);
         var_dump('<br />DB select: <br />');
         var_dump($resultarray);
         return $resultarray;
