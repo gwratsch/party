@@ -45,7 +45,8 @@ class login {
     private function globalAccessPages(){
         $list = array(
         '/user.php',
-        '/login.php'
+        '/login.php',
+        '/update.php'
         );
         return $list;
     }
