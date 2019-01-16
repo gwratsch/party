@@ -22,7 +22,7 @@ class DB_install{
         $dbinstall->host=$formDBsettings['host'];
         $dbinstall->port=$formDBsettings['port'];
         $dbinstall->checkDBisCreated();
-        $tablelist = (new DB_install)->tablelist();
+        $tablelist = (new DB_install)->tablelist($dbinstall->dbtype);
         $dbinstall->checktablename = 'dbconfig';
         if($dbinstall->checktableisCreated()){
             $settings['tablename']='dbconfig';
@@ -32,15 +32,14 @@ class DB_install{
             $dbinstall->checktablename = $selectResultArray[0];
         }
         $dbinstall->tableList = $tablelist;
-        $tablelist = (new DB_install)->updateDB();
+        $tablelist = (new DB_install)->updateDB($dbinstall->dbtype);
         $dbinstall->updatetableList = $tablelist;
         $dbinstall->create();
     }
     
-    function tablelist(){
+    function tablelist($dbtype){
         $tableInfo = array();    
         $tableInfo['rebuild_tables'] = false;
-        $dbtype = $dbinstall->dbtype;
         $table_list = array(
             "mysql"=>array(
                 "users"=>"CREATE TABLE IF NOT EXISTS users (userid int(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,firstname varchar(50) NOT NULL,lastname varchar(50) NOT NULL,adres varchar(100) NOT NULL,city varchar(50) NOT NULL,country varchar(50) NOT NULL,email varchar(200),user_info varchar(255),reg_date timestamp)",
@@ -82,8 +81,7 @@ class DB_install{
     // add Database updates in this functions
     // a new function have to add new updates.
     // save in the database the last executed update key
-    function updateDB(){
-        $dbtype = $dbinstall->dbtype;
+    function updateDB($dbtype){
         $table_list = array(
             "mysql"=>array(
                 "1"=>"CREATE TABLE IF NOT EXISTS dbconfig (
