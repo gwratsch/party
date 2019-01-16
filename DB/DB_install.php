@@ -109,35 +109,35 @@ class DB_install{
                 "6"=>"ALTER TABLE users ADD password varchar(255)"
                 ),
             "pgsql"=>array(
-                "1"=>"CREATE SEQUENCE dbconfig_id_seq;
-                    CREATE TABLE IF NOT EXISTS dbconfig (
+                "1"=>"CREATE SEQUENCE dbconfig_id_seq;",
+                "2"=>"CREATE TABLE IF NOT EXISTS dbconfig (
                 id int(6) NOT NULL PRIMARY KEY DEFAULT nextval('dbconfig_id_seq'), 
                 lastupdate int(6) NOT NULL,
                 reg_date timestamp
-                );
-                ALTER SEQUENCE dbconfig_id_seq OWNED BY dbconfig.id;",
-                "2"=>"CREATE SEQUENCE party_id_seq;
-                    CREATE TABLE IF NOT EXISTS party (
+                );",
+                "3"=>"ALTER SEQUENCE dbconfig_id_seq OWNED BY dbconfig.id;",
+                "4"=>"CREATE SEQUENCE party_id_seq;",
+                "5"=>"CREATE TABLE IF NOT EXISTS party (
                 partyid int(6) NOT NULL PRIMARY KEY DEFAULT nextval('party_id_seq'), 
                 userid int(6) NOT NULL,
                 partyinfo varchar(255) NOT NULL,
                 location varchar(255) NOT NULL,
                 reg_date timestamp
-                );
-                ALTER SEQUENCE party_id_seq OWNED BY party.id;",
-                "3"=>"CREATE SEQUENCE wishlist_id_seq;
-                    CREATE TABLE IF NOT EXISTS wishlist (
+                );",
+                "6"=>"ALTER SEQUENCE party_id_seq OWNED BY party.id;",
+                "7"=>"CREATE SEQUENCE wishlist_id_seq;",
+                "8"=>"CREATE TABLE IF NOT EXISTS wishlist (
                 wlid int(6) NOT NULL PRIMARY KEY DEFAULT nextval('wishlist_id_seq'), 
                 partyid int(6) NOT NULL,
                 userid int(6) NOT NULL,
                 wlinfo varchar(255) NOT NULL,
                 reg_date timestamp
-                );
-                ALTER SEQUENCE wishlist_id_seq OWNED BY wishlist.id;",
-                "4"=>"INSERT INTO dbconfig (
+                );",
+                "9"=>"ALTER SEQUENCE wishlist_id_seq OWNED BY wishlist.id;",
+                "10"=>"INSERT INTO dbconfig (
                 lastupdate) VALUES ('0')", 
-                "5"=>"ALTER TABLE party ADD partylist boolean",
-                "6"=>"ALTER TABLE users ADD password varchar(255)"
+                "11"=>"ALTER TABLE party ADD partylist boolean",
+                "12"=>"ALTER TABLE users ADD password varchar(255)"
             )
         );
         $updateScripts = $table_list[$dbtype];
