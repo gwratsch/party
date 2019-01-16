@@ -27,9 +27,29 @@ class mysql  extends  DB{
         return $sql;
     }
     function checkDBisCreated(){
+        $this->createdb = FALSE;
         $conn = $this->connect();
         $sql_check = 'SHOW DATABASES LIKE "'. $this->dbname.'"';
-        $this->createdb = $conn->exec($sql_check); 
+        $result = $conn->prepare($sql_check);
+        $result->execute();
+        $resultarray = $result->fetchAll();
+        if(is_array($resultarray) && count($resultarray)>0){
+            $this->createdb = TRUE; 
+        }
         $conn=null;
+    }
+    function checktableisCreated(){
+        $conn = $this->connect();
+        $tablename = $this->checktablename;
+        $dbname = $this->dbname;
+        $sql_check = 'select * from INFORMATION_SCHEMA.TABLES where table_schema = "'.$dbname.'" AND table_name = "'.$tablename.'"';
+        $result = $conn->prepare($sql_check);
+        $result->execute();
+        $resultarray = $result->fetchAll();
+        $this->tabelnameCheckResult = FALSE;
+        if(is_array($resultarray) && count($resultarray)>0){
+            $this->tabelnameCheckResult  = TRUE; 
+        }
+        $conn = null;
     }
 }

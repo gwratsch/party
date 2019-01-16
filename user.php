@@ -5,18 +5,19 @@ $user = new user();
 $updateUserInfo = FALSE;
 $pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){
-    if(array_key_exists('updateUser', $_POST)){ 
-        $updateUserInfo = TRUE;
-    }else{
-        $user->save();
-    }
-}    
+    $user->save();
+}   
+if(array_key_exists('userid', $_SESSION)){
+    $user->userid['content']= $_SESSION['userid'];
+    $updateUserInfo = TRUE;
+    $user->edit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="nl">
     <head>
         <?php 
-        echo $pagetemplate->head();
+            echo $pagetemplate->head();
         ?>
         <title>partyList</title>
     </head>
@@ -27,7 +28,7 @@ if(array_key_exists('submit', $_POST)){
         echo $pagetemplate->navigation();
         ?>
         <div class="row">
-        <section class="container col">
+        <section class="container p-3">
             <h2><?php echo t("User settings");?></h2>
             <form action="user.php" method="post" class="form-horizontal">
                 <?php
@@ -42,18 +43,13 @@ if(array_key_exists('submit', $_POST)){
                     $defaultChecked = $keyContent['defaultChecked'];
                    switch ($type) {
                         case 'hidden':
-                            $formContent .='<input type="'.$type.'" name="'.$name.'" value="'.$content.'">';
-                            break;
-                        case 'text':
-                            $formContent .='<div><label>'.t($name).'</label></div>:<input type="'.$type.'" name="'.$name.'" class="form-control" value="'.$content.'"><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
-                            break;
-                        case 'email':
-                            $formContent .='<div><label>'.t($name).'</label></div>:<input type="'.$type.'" name="'.$name.'" class="form-control" value="'.$content.'"><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
+                            $formContent .='<input type="'.$type.'" name="'.$keyName.'" value="'.$content.'">';
                             break;
                         case 'textarea':
-                            $formContent .='<div><label>'.t($name).'</label></div>:<textarea name="'.$name.'" class="form-control" >'.$content.'</textarea><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
+                            $formContent .='<div><label>'.t($name).'</label></div>:<textarea name="'.$keyName.'" class="form-control" >'.$content.'</textarea><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
                             break;
                         default:
+                            $formContent .='<div><label>'.t($name).'</label></div>:<input type="'.$type.'" name="'.$keyName.'" class="form-control" value="'.$content.'"  '.$defaultChecked.'><input type="checkbox" name="'.$name.'block" '.$defaultChecked.'><br />';
                             break;
                     }
                 }
@@ -61,24 +57,6 @@ if(array_key_exists('submit', $_POST)){
                 ?>
                   <input type="submit" name="submit">
             </form>
-        </section>
-        <section class="container col">
-            <h2>User list</h2>
-        <?php
-        $user->userid['content'] = '*';
-        $result = $user->select();
-        echo '<table class="table table-striped"><thead>
-      <tr>
-        <th>User id</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>';
-        foreach ($result as $key => $value) {
-            echo '<tr><td class="list--item">'.$value['userid'].'</td><td>'.$value['firstname'].' '.$value['lastname'].'</td>';
-        }
-        echo '</tr></tbody></table>';
-        ?>
         </section>
         </div>
     </body>

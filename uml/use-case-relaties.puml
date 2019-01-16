@@ -6,12 +6,14 @@ skinparam packageStyle rectangle
     
 rectangle system{
     (database) <|. (install)
+    (install) <|. (update)
     administrator - (install)
+    administrator - (update)
     (user registratie) .|>  (database)
     visitor - (user registratie)
-    visitor - (wishlist)
-    (wishlist) -|> (user registratie)
-    (database) <|. (wishlist)
+    visitor - (party)
+    (party) -|> (user registratie)
+    (database) <|. (party)
 }
 note bottom of visitor
     Aannamen: De bezoeker gebruikt de nieuwste browser versie

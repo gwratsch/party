@@ -1,7 +1,7 @@
 <?php
 include_once 'modules/translation.php';
+session_start();
 
-//$path = configsettings::pathname();
 spl_autoload_register(function ($class_name) {
     $pathlist = array(
         'includes',
@@ -16,7 +16,7 @@ spl_autoload_register(function ($class_name) {
         }
     }
 });
-
+(new login)->logincheck();
 function debuginfo($array){
     var_dump(print_r("<pre>".print_r($array,true)."</pre>"));
 }

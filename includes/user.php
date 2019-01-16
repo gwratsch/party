@@ -65,6 +65,13 @@ class user {
          "defaultChecked"=>"checked",
          "displayInfo"=>""
          );
+     $this->password=array(
+         "name"=>"password",
+         "content"=>"",
+         "type"=>"password",
+         "defaultChecked"=>"checked required",
+         "displayInfo"=>""
+         );
     }
     function dbconnection(){
         $this->dbtype = $dbtype = (new DB)->databasetype();
@@ -93,11 +100,14 @@ class user {
         }
         $userid = $this->userid;
         if($userid['content']==0){
+            $this->password['content']= (new login)->hashPwd($this->password['content']);
             $userid['content'] = $this->insert();
             $this->userid = $userid;
+            $this->password['content']= '';
         }else{
+            $this->password['content']= (new login)->hashPwd($this->password['content']);
             $this->update();
-        
+            $this->password['content']= '';
         }
         $fieldList= array();
         foreach ($this as $keyname => $keycontent) {
@@ -120,11 +130,11 @@ class user {
         $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
-        $sqlsettings['fieldnames']="userid, firstname, lastname,adres,city, country, email, user_info ";
+        $sqlsettings['fieldnames'] = $this->fieldnames('select');
         $userContent = $this->userid;
         $userid = $userContent['content'];
         $valuesconditions = "userid = ".$userid;
-        if($userid=='*'){$valuesconditions="1=1";}
+        if($userid=='*'){$valuesconditions="";}
         $sqlsettings['fieldconditions'] = $valuesconditions;
         return $this->DBconnect->select($sqlsettings);
     }
@@ -132,7 +142,7 @@ class user {
         $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
-        $sqlsettings['fieldnames']="firstname, lastname,adres,city, country, email, user_info ";
+        $sqlsettings['fieldnames']= $this->fieldnames('insert');
         $sqlsettings['fieldvalues'] = $this->fieldvalues();
         return $this->DBconnect->insert($sqlsettings);
     }
@@ -171,6 +181,28 @@ class user {
                     $counter += 1;
                 }else{
                     $values .= ",'".$value['content']."'"; 
+                }
+            }
+        }
+        return $values;
+    }
+    private function fieldnames($queryname){
+        $counter=0;
+        $values='';
+        
+        foreach($this as $key=>$value){
+            If(is_array($value) && array_key_exists('content', $value)){
+                $addValue = TRUE;
+                if($queryname == 'insert' && $key=='userid'){
+                    $addValue = FALSE;
+                }
+                if($addValue){
+                    if($counter==0 ){
+                        $values .= $key; 
+                        $counter += 1;
+                    }else{
+                        $values .= ",".$key; 
+                    }
                 }
             }
         }
@@ -246,5 +278,13 @@ class user {
     private function displayfieldvaluesUpdate(){
         $values = "fieldname='".$this->jsonFieldList."'";
         return $values;
+    }
+    function edit(){
+        $result= $this->select();
+        foreach ($result[0] as $key => $value) {
+            if(array_key_exists($key, $this) && $key !='password'){
+                $this->$key['content']=$value;
+            }
+        }
     }
 }

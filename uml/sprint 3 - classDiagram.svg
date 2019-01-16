@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1201px" preserveAspectRatio="none" style="width:1107px;height:1201px;" version="1.1" viewBox="0 0 1107 1201" width="1107px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1pieuw905oj6y" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--cluster database-->
+        <polygon fill="#FFFFFF" filter="url(#f1pieuw905oj6y)" points="687,652,757,652,764,675.6094,1057,675.6094,1057,1194,687,1194,687,652" style="stroke: #000000; stroke-width: 2.0;"/>
+        <line style="stroke: #000000; stroke-width: 2.0;" x1="687" x2="764" y1="675.6094" y2="675.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="64" x="691" y="668.5332">database</text>
+        <!--class DB-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="144.8516" style="stroke: #A80036; stroke-width: 1.5;" width="112" x="833" y="874"/>
+        <ellipse cx="876.35" cy="890" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M879.1156,885.875 Q879.2719,885.6563 879.4594,885.5469 Q879.6469,885.4375 879.8656,885.4375 Q880.2406,885.4375 880.475,885.6953 Q880.7094,885.9531 880.7094,886.5625 L880.7094,888.0156 Q880.7094,888.625 880.475,888.8906 Q880.2406,889.1563 879.8656,889.1563 Q879.5219,889.1563 879.3188,888.9531 Q879.1156,888.7656 879.0063,888.25 Q878.9594,887.8906 878.7719,887.7031 Q878.4438,887.3281 877.8344,887.1094 Q877.225,886.8906 876.6,886.8906 Q875.8344,886.8906 875.2016,887.2188 Q874.5688,887.5469 874.0766,888.2969 Q873.5844,889.0469 873.5844,890.0781 L873.5844,891.1719 Q873.5844,892.4063 874.475,893.2266 Q875.3656,894.0469 876.9594,894.0469 Q877.8969,894.0469 878.5531,893.7969 Q878.9438,893.6406 879.3656,893.2031 Q879.6313,892.9375 879.7797,892.8594 Q879.9281,892.7813 880.1313,892.7813 Q880.4594,892.7813 880.7172,893.0391 Q880.975,893.2969 880.975,893.6406 Q880.975,893.9844 880.6313,894.3906 Q880.1313,894.9688 879.3344,895.2969 Q878.2563,895.75 876.9594,895.75 Q875.4438,895.75 874.2406,895.125 Q873.2563,894.625 872.5688,893.5547 Q871.8813,892.4844 871.8813,891.2031 L871.8813,890.0469 Q871.8813,888.7188 872.4984,887.5703 Q873.1156,886.4219 874.2094,885.8047 Q875.3031,885.1875 876.5375,885.1875 Q877.2719,885.1875 877.9203,885.3516 Q878.5688,885.5156 879.1156,885.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="17" x="896.65" y="894.9102">DB</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="834" x2="944" y1="906" y2="906"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="839" y="921.4189">-connect : configdb</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="839" y="935.2549">-updatedb: dbupdate</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="834" x2="944" y1="941.6719" y2="941.6719"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="839" y="957.0908">-connect()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="35" x="839" y="970.9268">insert()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="41" x="839" y="984.7627">update()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="839" y="998.5986">delete()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="37" x="839" y="1012.4346">select()</text>
+        <!--class config-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="117.1797" style="stroke: #A80036; stroke-width: 1.5;" width="116" x="917" y="696"/>
+        <ellipse cx="954.95" cy="712" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M957.7156,707.875 Q957.8719,707.6563 958.0594,707.5469 Q958.2469,707.4375 958.4656,707.4375 Q958.8406,707.4375 959.075,707.6953 Q959.3094,707.9531 959.3094,708.5625 L959.3094,710.0156 Q959.3094,710.625 959.075,710.8906 Q958.8406,711.1563 958.4656,711.1563 Q958.1219,711.1563 957.9188,710.9531 Q957.7156,710.7656 957.6063,710.25 Q957.5594,709.8906 957.3719,709.7031 Q957.0438,709.3281 956.4344,709.1094 Q955.825,708.8906 955.2,708.8906 Q954.4344,708.8906 953.8016,709.2188 Q953.1688,709.5469 952.6766,710.2969 Q952.1844,711.0469 952.1844,712.0781 L952.1844,713.1719 Q952.1844,714.4063 953.075,715.2266 Q953.9656,716.0469 955.5594,716.0469 Q956.4969,716.0469 957.1531,715.7969 Q957.5438,715.6406 957.9656,715.2031 Q958.2313,714.9375 958.3797,714.8594 Q958.5281,714.7813 958.7313,714.7813 Q959.0594,714.7813 959.3172,715.0391 Q959.575,715.2969 959.575,715.6406 Q959.575,715.9844 959.2313,716.3906 Q958.7313,716.9688 957.9344,717.2969 Q956.8563,717.75 955.5594,717.75 Q954.0438,717.75 952.8406,717.125 Q951.8563,716.625 951.1688,715.5547 Q950.4813,714.4844 950.4813,713.2031 L950.4813,712.0469 Q950.4813,710.7188 951.0984,709.5703 Q951.7156,708.4219 952.8094,707.8047 Q953.9031,707.1875 955.1375,707.1875 Q955.8719,707.1875 956.5203,707.3516 Q957.1688,707.5156 957.7156,707.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="974.05" y="716.9102">config</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="918" x2="1032" y1="728" y2="728"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="55" x="923" y="743.4189">#user : text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="923" y="757.2549">#pwd : password</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="923" y="771.0908">#host: text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="923" y="784.9268">#databasename : text</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="99" x="923" y="798.7627">#databasetype : text</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="918" x2="1032" y1="805.1797" y2="805.1797"/>
+        <!--class dbupdate-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="117.1797" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="730" y="696"/>
+        <ellipse cx="775.75" cy="712" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M778.5156,707.875 Q778.6719,707.6563 778.8594,707.5469 Q779.0469,707.4375 779.2656,707.4375 Q779.6406,707.4375 779.875,707.6953 Q780.1094,707.9531 780.1094,708.5625 L780.1094,710.0156 Q780.1094,710.625 779.875,710.8906 Q779.6406,711.1563 779.2656,711.1563 Q778.9219,711.1563 778.7188,710.9531 Q778.5156,710.7656 778.4063,710.25 Q778.3594,709.8906 778.1719,709.7031 Q777.8438,709.3281 777.2344,709.1094 Q776.625,708.8906 776,708.8906 Q775.2344,708.8906 774.6016,709.2188 Q773.9688,709.5469 773.4766,710.2969 Q772.9844,711.0469 772.9844,712.0781 L772.9844,713.1719 Q772.9844,714.4063 773.875,715.2266 Q774.7656,716.0469 776.3594,716.0469 Q777.2969,716.0469 777.9531,715.7969 Q778.3438,715.6406 778.7656,715.2031 Q779.0313,714.9375 779.1797,714.8594 Q779.3281,714.7813 779.5313,714.7813 Q779.8594,714.7813 780.1172,715.0391 Q780.375,715.2969 780.375,715.6406 Q780.375,715.9844 780.0313,716.3906 Q779.5313,716.9688 778.7344,717.2969 Q777.6563,717.75 776.3594,717.75 Q774.8438,717.75 773.6406,717.125 Q772.6563,716.625 771.9688,715.5547 Q771.2813,714.4844 771.2813,713.2031 L771.2813,712.0469 Q771.2813,710.7188 771.8984,709.5703 Q772.5156,708.4219 773.6094,707.8047 Q774.7031,707.1875 775.9375,707.1875 Q776.6719,707.1875 777.3203,707.3516 Q777.9688,707.5156 778.5156,707.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="52" x="796.25" y="716.9102">dbupdate</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="731" x2="881" y1="728" y2="728"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="140" x="736" y="743.4189">#lastupdate :int(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="736" y="757.2549">#reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="731" x2="881" y1="763.6719" y2="763.6719"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="736" y="779.0908">#checkUpdateStatus()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="736" y="792.9268">#executeUpdate()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="736" y="806.7627">#changeLastupdate()</text>
+        <!--class mysql-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="89.5078" style="stroke: #A80036; stroke-width: 1.5;" width="109" x="754.5" y="1080"/>
+        <ellipse cx="789.3" cy="1096" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M792.0656,1091.875 Q792.2219,1091.6563 792.4094,1091.5469 Q792.5969,1091.4375 792.8156,1091.4375 Q793.1906,1091.4375 793.425,1091.6953 Q793.6594,1091.9531 793.6594,1092.5625 L793.6594,1094.0156 Q793.6594,1094.625 793.425,1094.8906 Q793.1906,1095.1563 792.8156,1095.1563 Q792.4719,1095.1563 792.2688,1094.9531 Q792.0656,1094.7656 791.9563,1094.25 Q791.9094,1093.8906 791.7219,1093.7031 Q791.3938,1093.3281 790.7844,1093.1094 Q790.175,1092.8906 789.55,1092.8906 Q788.7844,1092.8906 788.1516,1093.2188 Q787.5188,1093.5469 787.0266,1094.2969 Q786.5344,1095.0469 786.5344,1096.0781 L786.5344,1097.1719 Q786.5344,1098.4063 787.425,1099.2266 Q788.3156,1100.0469 789.9094,1100.0469 Q790.8469,1100.0469 791.5031,1099.7969 Q791.8938,1099.6406 792.3156,1099.2031 Q792.5813,1098.9375 792.7297,1098.8594 Q792.8781,1098.7813 793.0813,1098.7813 Q793.4094,1098.7813 793.6672,1099.0391 Q793.925,1099.2969 793.925,1099.6406 Q793.925,1099.9844 793.5813,1100.3906 Q793.0813,1100.9688 792.2844,1101.2969 Q791.2063,1101.75 789.9094,1101.75 Q788.3938,1101.75 787.1906,1101.125 Q786.2063,1100.625 785.5188,1099.5547 Q784.8313,1098.4844 784.8313,1097.2031 L784.8313,1096.0469 Q784.8313,1094.7188 785.4484,1093.5703 Q786.0656,1092.4219 787.1594,1091.8047 Q788.2531,1091.1875 789.4875,1091.1875 Q790.2219,1091.1875 790.8703,1091.3516 Q791.5188,1091.5156 792.0656,1091.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="807.7" y="1100.9102">mysql</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="755.5" x2="862.5" y1="1112" y2="1112"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="755.5" x2="862.5" y1="1120" y2="1120"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="760.5" y="1135.4189">connect()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="760.5" y="1149.2549">sql_exceptions()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="760.5" y="1163.0908">checkDBisCreated()</text>
+        <!--class pgsql-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="89.5078" style="stroke: #A80036; stroke-width: 1.5;" width="109" x="898.5" y="1080"/>
+        <ellipse cx="934.2" cy="1096" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M936.9656,1091.875 Q937.1219,1091.6563 937.3094,1091.5469 Q937.4969,1091.4375 937.7156,1091.4375 Q938.0906,1091.4375 938.325,1091.6953 Q938.5594,1091.9531 938.5594,1092.5625 L938.5594,1094.0156 Q938.5594,1094.625 938.325,1094.8906 Q938.0906,1095.1563 937.7156,1095.1563 Q937.3719,1095.1563 937.1688,1094.9531 Q936.9656,1094.7656 936.8563,1094.25 Q936.8094,1093.8906 936.6219,1093.7031 Q936.2938,1093.3281 935.6844,1093.1094 Q935.075,1092.8906 934.45,1092.8906 Q933.6844,1092.8906 933.0516,1093.2188 Q932.4188,1093.5469 931.9266,1094.2969 Q931.4344,1095.0469 931.4344,1096.0781 L931.4344,1097.1719 Q931.4344,1098.4063 932.325,1099.2266 Q933.2156,1100.0469 934.8094,1100.0469 Q935.7469,1100.0469 936.4031,1099.7969 Q936.7938,1099.6406 937.2156,1099.2031 Q937.4813,1098.9375 937.6297,1098.8594 Q937.7781,1098.7813 937.9813,1098.7813 Q938.3094,1098.7813 938.5672,1099.0391 Q938.825,1099.2969 938.825,1099.6406 Q938.825,1099.9844 938.4813,1100.3906 Q937.9813,1100.9688 937.1844,1101.2969 Q936.1063,1101.75 934.8094,1101.75 Q933.2938,1101.75 932.0906,1101.125 Q931.1063,1100.625 930.4188,1099.5547 Q929.7313,1098.4844 929.7313,1097.2031 L929.7313,1096.0469 Q929.7313,1094.7188 930.3484,1093.5703 Q930.9656,1092.4219 932.0594,1091.8047 Q933.1531,1091.1875 934.3875,1091.1875 Q935.1219,1091.1875 935.7703,1091.3516 Q936.4188,1091.5156 936.9656,1091.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="952.8" y="1100.9102">pgsql</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="899.5" x2="1006.5" y1="1112" y2="1112"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="899.5" x2="1006.5" y1="1120" y2="1120"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="47" x="904.5" y="1135.4189">connect()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="904.5" y="1149.2549">sql_exceptions()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="97" x="904.5" y="1163.0908">checkDBisCreated()</text>
+        <!--class User-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="297.0469" style="stroke: #A80036; stroke-width: 1.5;" width="298" x="546" y="8"/>
+        <ellipse cx="677.25" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M680.0156,19.875 Q680.1719,19.6563 680.3594,19.5469 Q680.5469,19.4375 680.7656,19.4375 Q681.1406,19.4375 681.375,19.6953 Q681.6094,19.9531 681.6094,20.5625 L681.6094,22.0156 Q681.6094,22.625 681.375,22.8906 Q681.1406,23.1563 680.7656,23.1563 Q680.4219,23.1563 680.2188,22.9531 Q680.0156,22.7656 679.9063,22.25 Q679.8594,21.8906 679.6719,21.7031 Q679.3438,21.3281 678.7344,21.1094 Q678.125,20.8906 677.5,20.8906 Q676.7344,20.8906 676.1016,21.2188 Q675.4688,21.5469 674.9766,22.2969 Q674.4844,23.0469 674.4844,24.0781 L674.4844,25.1719 Q674.4844,26.4063 675.375,27.2266 Q676.2656,28.0469 677.8594,28.0469 Q678.7969,28.0469 679.4531,27.7969 Q679.8438,27.6406 680.2656,27.2031 Q680.5313,26.9375 680.6797,26.8594 Q680.8281,26.7813 681.0313,26.7813 Q681.3594,26.7813 681.6172,27.0391 Q681.875,27.2969 681.875,27.6406 Q681.875,27.9844 681.5313,28.3906 Q681.0313,28.9688 680.2344,29.2969 Q679.1563,29.75 677.8594,29.75 Q676.3438,29.75 675.1406,29.125 Q674.1563,28.625 673.4688,27.5547 Q672.7813,26.4844 672.7813,25.2031 L672.7813,24.0469 Q672.7813,22.7188 673.3984,21.5703 Q674.0156,20.4219 675.1094,19.8047 Q676.2031,19.1875 677.4375,19.1875 Q678.1719,19.1875 678.8203,19.3516 Q679.4688,19.5156 680.0156,19.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="697.75" y="28.9102">User</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="547" x2="843" y1="40" y2="40"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="286" x="552" y="55.4189">userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="176" x="552" y="69.2549">firstname :VARCHAR(50) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="552" y="83.0908">lastname :VARCHAR(50) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="165" x="552" y="96.9268">adres :VARCHAR(100) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="148" x="552" y="110.7627">city :VARCHAR(50) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="168" x="552" y="124.5986">country :VARCHAR(50) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="552" y="138.4346">email :VARCHAR(200)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="552" y="152.2705">user_info :VARCHAR(255)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="552" y="166.1064">-reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="547" x2="843" y1="172.5234" y2="172.5234"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="61" x="552" y="187.9424">+saveUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="552" y="201.7783">-insertUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="552" y="215.6143">-updateUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="552" y="229.4502">-deleteUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="552" y="243.2861">-selectUser()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="552" y="257.1221">-insertUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="134" x="552" y="270.958">-updateUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="552" y="284.7939">-deleteUserDisplayOption()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="552" y="298.6299">-selectUserDisplayOption()</text>
+        <!--class Party-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="214.0313" style="stroke: #A80036; stroke-width: 1.5;" width="354" x="6" y="383"/>
+        <ellipse cx="165.25" cy="399" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M168.0156,394.875 Q168.1719,394.6563 168.3594,394.5469 Q168.5469,394.4375 168.7656,394.4375 Q169.1406,394.4375 169.375,394.6953 Q169.6094,394.9531 169.6094,395.5625 L169.6094,397.0156 Q169.6094,397.625 169.375,397.8906 Q169.1406,398.1563 168.7656,398.1563 Q168.4219,398.1563 168.2188,397.9531 Q168.0156,397.7656 167.9063,397.25 Q167.8594,396.8906 167.6719,396.7031 Q167.3438,396.3281 166.7344,396.1094 Q166.125,395.8906 165.5,395.8906 Q164.7344,395.8906 164.1016,396.2188 Q163.4688,396.5469 162.9766,397.2969 Q162.4844,398.0469 162.4844,399.0781 L162.4844,400.1719 Q162.4844,401.4063 163.375,402.2266 Q164.2656,403.0469 165.8594,403.0469 Q166.7969,403.0469 167.4531,402.7969 Q167.8438,402.6406 168.2656,402.2031 Q168.5313,401.9375 168.6797,401.8594 Q168.8281,401.7813 169.0313,401.7813 Q169.3594,401.7813 169.6172,402.0391 Q169.875,402.2969 169.875,402.6406 Q169.875,402.9844 169.5313,403.3906 Q169.0313,403.9688 168.2344,404.2969 Q167.1563,404.75 165.8594,404.75 Q164.3438,404.75 163.1406,404.125 Q162.1563,403.625 161.4688,402.5547 Q160.7813,401.4844 160.7813,400.2031 L160.7813,399.0469 Q160.7813,397.7188 161.3984,396.5703 Q162.0156,395.4219 163.1094,394.8047 Q164.2031,394.1875 165.4375,394.1875 Q166.1719,394.1875 166.8203,394.3516 Q167.4688,394.5156 168.0156,394.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="185.75" y="403.9102">Party</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="359" y1="415" y2="415"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="342" x="12" y="430.4189">partyId :INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="12" y="444.2549">userid :int(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="180" x="12" y="458.0908">partyInfo :VARCHAR(255) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="174" x="12" y="471.9268">location :VARCHAR(255) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="147" x="12" y="485.7627">partylist : BOOLEAN (yes / no)</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="12" y="499.5986">-reg_date :IMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="359" y1="506.0156" y2="506.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="117" x="12" y="521.4346">-countcheck_wishlists()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="12" y="535.2705">+saveparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="12" y="549.1064">-selectparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="12" y="562.9424">-insertparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="70" x="12" y="576.7783">-updateparty()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="12" y="590.6143">-deleteparty()</text>
+        <!--class Wishlist-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="186.3594" style="stroke: #A80036; stroke-width: 1.5;" width="341" x="524.5" y="397"/>
+        <ellipse cx="668.75" cy="413" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M671.5156,408.875 Q671.6719,408.6563 671.8594,408.5469 Q672.0469,408.4375 672.2656,408.4375 Q672.6406,408.4375 672.875,408.6953 Q673.1094,408.9531 673.1094,409.5625 L673.1094,411.0156 Q673.1094,411.625 672.875,411.8906 Q672.6406,412.1563 672.2656,412.1563 Q671.9219,412.1563 671.7188,411.9531 Q671.5156,411.7656 671.4063,411.25 Q671.3594,410.8906 671.1719,410.7031 Q670.8438,410.3281 670.2344,410.1094 Q669.625,409.8906 669,409.8906 Q668.2344,409.8906 667.6016,410.2188 Q666.9688,410.5469 666.4766,411.2969 Q665.9844,412.0469 665.9844,413.0781 L665.9844,414.1719 Q665.9844,415.4063 666.875,416.2266 Q667.7656,417.0469 669.3594,417.0469 Q670.2969,417.0469 670.9531,416.7969 Q671.3438,416.6406 671.7656,416.2031 Q672.0313,415.9375 672.1797,415.8594 Q672.3281,415.7813 672.5313,415.7813 Q672.8594,415.7813 673.1172,416.0391 Q673.375,416.2969 673.375,416.6406 Q673.375,416.9844 673.0313,417.3906 Q672.5313,417.9688 671.7344,418.2969 Q670.6563,418.75 669.3594,418.75 Q667.8438,418.75 666.6406,418.125 Q665.6563,417.625 664.9688,416.5547 Q664.2813,415.4844 664.2813,414.2031 L664.2813,413.0469 Q664.2813,411.7188 664.8984,410.5703 Q665.5156,409.4219 666.6094,408.8047 Q667.7031,408.1875 668.9375,408.1875 Q669.6719,408.1875 670.3203,408.3516 Q670.9688,408.5156 671.5156,408.875 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="689.25" y="417.9102">Wishlist</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="525.5" x2="864.5" y1="429" y2="429"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="329" x="530.5" y="444.4189">wlId :INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="115" x="530.5" y="458.2549">partyId :nt(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="530.5" y="472.0908">userid :int(6) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="167" x="530.5" y="485.9268">wlInfo :VARCHAR(255) NOT NULL</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="530.5" y="499.7627">-reg_date :TIMESTAMP</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="525.5" x2="864.5" y1="506.1797" y2="506.1797"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="75" x="530.5" y="521.5986">+savewishlist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="530.5" y="535.4346">-insertlist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="58" x="530.5" y="549.2705">-updatelist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="530.5" y="563.1064">-deletelist()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="530.5" y="576.9424">-selectlist()</text>
+        <!--class translation-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="61.8359" style="stroke: #A80036; stroke-width: 1.5;" width="90" x="879" y="125.5"/>
+        <ellipse cx="894" cy="141.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M896.7656,137.375 Q896.9219,137.1563 897.1094,137.0469 Q897.2969,136.9375 897.5156,136.9375 Q897.8906,136.9375 898.125,137.1953 Q898.3594,137.4531 898.3594,138.0625 L898.3594,139.5156 Q898.3594,140.125 898.125,140.3906 Q897.8906,140.6563 897.5156,140.6563 Q897.1719,140.6563 896.9688,140.4531 Q896.7656,140.2656 896.6563,139.75 Q896.6094,139.3906 896.4219,139.2031 Q896.0938,138.8281 895.4844,138.6094 Q894.875,138.3906 894.25,138.3906 Q893.4844,138.3906 892.8516,138.7188 Q892.2188,139.0469 891.7266,139.7969 Q891.2344,140.5469 891.2344,141.5781 L891.2344,142.6719 Q891.2344,143.9063 892.125,144.7266 Q893.0156,145.5469 894.6094,145.5469 Q895.5469,145.5469 896.2031,145.2969 Q896.5938,145.1406 897.0156,144.7031 Q897.2813,144.4375 897.4297,144.3594 Q897.5781,144.2813 897.7813,144.2813 Q898.1094,144.2813 898.3672,144.5391 Q898.625,144.7969 898.625,145.1406 Q898.625,145.4844 898.2813,145.8906 Q897.7813,146.4688 896.9844,146.7969 Q895.9063,147.25 894.6094,147.25 Q893.0938,147.25 891.8906,146.625 Q890.9063,146.125 890.2188,145.0547 Q889.5313,143.9844 889.5313,142.7031 L889.5313,141.5469 Q889.5313,140.2188 890.1484,139.0703 Q890.7656,137.9219 891.8594,137.3047 Q892.9531,136.6875 894.1875,136.6875 Q894.9219,136.6875 895.5703,136.8516 Q896.2188,137.0156 896.7656,137.375 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="908" y="146.4102">translation</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="880" x2="968" y1="157.5" y2="157.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="880" x2="968" y1="165.5" y2="165.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="11" x="885" y="180.9189">t()</text>
+        <!--class security-->
+        <rect fill="#FEFECE" filter="url(#f1pieuw905oj6y)" height="89.5078" style="stroke: #A80036; stroke-width: 1.5;" width="94" x="1004" y="111.5"/>
+        <ellipse cx="1028" cy="127.5" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M1030.7656,123.375 Q1030.9219,123.1563 1031.1094,123.0469 Q1031.2969,122.9375 1031.5156,122.9375 Q1031.8906,122.9375 1032.125,123.1953 Q1032.3594,123.4531 1032.3594,124.0625 L1032.3594,125.5156 Q1032.3594,126.125 1032.125,126.3906 Q1031.8906,126.6563 1031.5156,126.6563 Q1031.1719,126.6563 1030.9688,126.4531 Q1030.7656,126.2656 1030.6563,125.75 Q1030.6094,125.3906 1030.4219,125.2031 Q1030.0938,124.8281 1029.4844,124.6094 Q1028.875,124.3906 1028.25,124.3906 Q1027.4844,124.3906 1026.8516,124.7188 Q1026.2188,125.0469 1025.7266,125.7969 Q1025.2344,126.5469 1025.2344,127.5781 L1025.2344,128.6719 Q1025.2344,129.9063 1026.125,130.7266 Q1027.0156,131.5469 1028.6094,131.5469 Q1029.5469,131.5469 1030.2031,131.2969 Q1030.5938,131.1406 1031.0156,130.7031 Q1031.2813,130.4375 1031.4297,130.3594 Q1031.5781,130.2813 1031.7813,130.2813 Q1032.1094,130.2813 1032.3672,130.5391 Q1032.625,130.7969 1032.625,131.1406 Q1032.625,131.4844 1032.2813,131.8906 Q1031.7813,132.4688 1030.9844,132.7969 Q1029.9063,133.25 1028.6094,133.25 Q1027.0938,133.25 1025.8906,132.625 Q1024.9063,132.125 1024.2188,131.0547 Q1023.5313,129.9844 1023.5313,128.7031 L1023.5313,127.5469 Q1023.5313,126.2188 1024.1484,125.0703 Q1024.7656,123.9219 1025.8594,123.3047 Q1026.9531,122.6875 1028.1875,122.6875 Q1028.9219,122.6875 1029.5703,122.8516 Q1030.2188,123.0156 1030.7656,123.375 Z "/>
+        <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="1044" y="132.4102">security</text>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1005" x2="1097" y1="143.5" y2="143.5"/>
+        <line style="stroke: #A80036; stroke-width: 1.5;" x1="1005" x2="1097" y1="151.5" y2="151.5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="34" x="1010" y="166.9189">clean()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="30" x="1010" y="180.7549">valid()</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="1010" y="194.5908">removeHtmlTag()</text>
+        <path d="M948.964,813.022 C940.312,832.136 930.57,853.66 921.492,873.715 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M831.128,813.022 C839.478,832.136 848.881,853.66 857.641,873.715 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M848.188,1037.542 C841.534,1052.221 834.911,1066.835 829.054,1079.757 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="841.944,1034.361,856.576,1019.035,854.695,1040.141,841.944,1034.361" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M921.827,1038.031 C927.09,1052.546 932.324,1066.978 936.957,1079.757 " fill="none" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/>
+        <polygon fill="none" points="915.176,1040.223,914.939,1019.035,928.338,1035.451,915.176,1040.223" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M841.479,305.242 C858.428,329.583 873.15,355.803 883,383 C915.388,472.427 942.212,522.568 883,597 C835.011,657.325 766.666,579.711 714,636 C709.5528,640.7531 705.9123,646.1155 702.9473,651.8654 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M695,583.179 C695,601.7928 695,621.5601 695,640.7859 C695,643.1891 695,645.5839 695,647.9669 C695,649.1584 695,650.3469 695,651.5321 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M360.277,581.889 C433.0885,619.219 515.3123,661.3748 580.0446,694.5627 C612.4108,711.1567 640.4042,725.5088 660.6617,735.8947 C670.7905,741.0877 678.9853,745.2892 684.8258,748.2835 C685.5559,748.6578 686.2491,749.0133 686.9048,749.3494 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <path d="M545.876,254.052 C483.44,294.477 410.665,341.596 346.748,382.98 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="112" x="410" y="349.4951">participatePartyList</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="531.0063" y="256.1725">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="20" x="338.0389" y="372.0401">0..*</text>
+        <path d="M360.277,490 C413.441,490 471.623,490 524.35,490 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="128" x="378.25" y="483.4951">userPartyCombination</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="367.9035" y="487.1644">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="509.4588" y="487.1324">1</text>
+        <path d="M695,305.314 C695,336.392 695,368.322 695,396.662 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="89" x="696" y="349.4951">changeWishlist</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="687.8305" y="326.4122">1</text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="5" x="689.8008" y="386.0814">*</text>
+        <!--
+@startuml
+skinparam classAttributeIconSize 0
+
+package "database" {
+    class DB{
+        - connect : configdb
+        - updatedb: dbupdate
+        - connect()
+        insert()
+        update()
+        delete()
+        select()
+    }
+    class config{
+        # user : text
+        # pwd : password
+        # host: text
+        # databasename : text
+        # databasetype : text
+    }
+    class dbupdate {
+        {field} # lastupdate :int(6) NOT NULL
+        {field} # reg_date :TIMESTAMP
+        # checkUpdateStatus()
+        # executeUpdate()
+        # changeLastupdate()
+    }
+    class mysql {
+        connect()
+        sql_exceptions()
+        checkDBisCreated()
+    }
+    class pgsql {
+        connect()
+        sql_exceptions()
+        checkDBisCreated()
+    }
+    config - - DB
+    dbupdate - - DB
+    DB <|.. mysql
+    DB <|.. pgsql
+
+}
+class User{
+    {field} userId :INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY 
+    {field} firstname :VARCHAR(50) NOT NULL
+    {field} lastname :VARCHAR(50) NOT NULL
+    {field} adres :VARCHAR(100) NOT NULL
+    {field} city :VARCHAR(50) NOT NULL
+    {field} country :VARCHAR(50) NOT NULL
+    {field} email :VARCHAR(200)
+    {field} user_info :VARCHAR(255)
+    {field} - reg_date :TIMESTAMP
+    + saveUser()
+    - insertUser()
+    - updateUser()
+    - deleteUser()
+    - selectUser()
+    - insertUserDisplayOption()
+    - updateUserDisplayOption()
+    - deleteUserDisplayOption()
+    - selectUserDisplayOption()
+}
+
+class Party{
+    {field} partyId :INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY 
+    {field} userid :int(6) NOT NULL
+    {field} partyInfo :VARCHAR(255) NOT NULL
+    {field} location :VARCHAR(255) NOT NULL
+    {field} partylist : BOOLEAN (yes / no)
+    {field} - reg_date :IMESTAMP
+    {method} - countcheck_wishlists()
+    +saveparty()
+    -selectparty()
+    -insertparty()
+    -updateparty()
+    -deleteparty()
+}
+class Wishlist{
+    {field} wlId :INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY
+    {field} partyId :nt(6) NOT NULL
+    {field} userid :int(6) NOT NULL
+    {field} wlInfo :VARCHAR(255) NOT NULL
+    {field} - reg_date :TIMESTAMP
+    +savewishlist()
+    -insertlist()
+    -updatelist()
+    -deletelist()
+    -selectlist()
+}
+
+class translation{
+    t()
+}
+    
+class security{
+    clean()
+    valid()
+    removeHtmlTag()
+}
+
+User - - database
+Wishlist - - database
+Party - - database
+User "1" - - "0..*" Party : participatePartyList
+Party "1" -right- "1" Wishlist : userPartyCombination
+User "1" - - "*" Wishlist : changeWishlist
+
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 18:18:59 CEST 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_112-b15
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: nl
+Country: NL
+-->
+    </g>
+</svg>
