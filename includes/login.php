@@ -46,7 +46,9 @@ class login {
         $list = array(
         '/user.php',
         '/login.php',
-        '/update.php'
+        '/update.php',
+         '/install.php',
+         '/index.php'
         );
         return $list;
     }

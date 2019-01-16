@@ -111,14 +111,14 @@ class DB_install{
             "pgsql"=>array(
                 "1"=>"CREATE SEQUENCE dbconfig_id_seq;
                     CREATE TABLE IF NOT EXISTS dbconfig (
-                id int(6) serial NOT NULL PRIMARY KEY DEFAULT nextval('dbconfig_id_seq'), 
+                id int(6) NOT NULL PRIMARY KEY DEFAULT nextval('dbconfig_id_seq'), 
                 lastupdate int(6) NOT NULL,
                 reg_date timestamp
                 );
                 ALTER SEQUENCE dbconfig_id_seq OWNED BY dbconfig.id;",
                 "2"=>"CREATE SEQUENCE party_id_seq;
                     CREATE TABLE IF NOT EXISTS party (
-                partyid int(6) serial NOT NULL PRIMARY KEY DEFAULT nextval('party_id_seq'), 
+                partyid int(6) NOT NULL PRIMARY KEY DEFAULT nextval('party_id_seq'), 
                 userid int(6) NOT NULL,
                 partyinfo varchar(255) NOT NULL,
                 location varchar(255) NOT NULL,
@@ -127,7 +127,7 @@ class DB_install{
                 ALTER SEQUENCE party_id_seq OWNED BY party.id;",
                 "3"=>"CREATE SEQUENCE wishlist_id_seq;
                     CREATE TABLE IF NOT EXISTS wishlist (
-                wlid int(6) serial NOT NULL PRIMARY KEY DEFAULT nextval('wishlist_id_seq'), 
+                wlid int(6) NOT NULL PRIMARY KEY DEFAULT nextval('wishlist_id_seq'), 
                 partyid int(6) NOT NULL,
                 userid int(6) NOT NULL,
                 wlinfo varchar(255) NOT NULL,
