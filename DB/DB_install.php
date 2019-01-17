@@ -120,10 +120,10 @@ class DB_install{
                 "4"=>"INSERT INTO dbconfig ( lastupdate) VALUES ('0')", 
                 "5"=>"CREATE SEQUENCE party_id_seq;",
                 "6"=>"CREATE TABLE IF NOT EXISTS party ( partyid integer NOT NULL DEFAULT NEXTVAL('party_id_seq') PRIMARY KEY, userid integer NOT NULL, partyinfo varchar(255) NOT NULL, location varchar(255) NOT NULL, reg_date timestamp );",
-                "7"=>"ALTER SEQUENCE party_id_seq OWNED BY party.id;",
+                "7"=>"ALTER SEQUENCE party_id_seq OWNED BY party.partyid;",
                 "8"=>"CREATE SEQUENCE wishlist_id_seq;",
                 "9"=>"CREATE TABLE IF NOT EXISTS wishlist ( wlid integer NOT NULL DEFAULT NEXTVAL('wishlist_id_seq') PRIMARY KEY, partyid integer NOT NULL, userid integer NOT NULL, wlinfo varchar(255) NOT NULL, reg_date timestamp );",
-                "10"=>"ALTER SEQUENCE wishlist_id_seq OWNED BY wishlist.id;",
+                "10"=>"ALTER SEQUENCE wishlist_id_seq OWNED BY wishlist.wlid;",
                 "11"=>"ALTER TABLE party ADD partylist boolean",
                 "12"=>"ALTER TABLE users ADD password varchar(255)"
             )
