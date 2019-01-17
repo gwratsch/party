@@ -31,21 +31,38 @@ class DB {
     }
     function select($settings){
         $conn = $this->connect();
+        $resultarray ='';
         $sql = "SELECT ".$settings['fieldnames']." FROM ".$settings['tablename'];
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
-        $result = $conn->prepare($sql);
-        $result->execute();
-        $resultarray = $result->fetchAll(PDO::FETCH_CLASS);
+        try{
+            $result = $conn->prepare($sql);
+            $result->execute();
+            $PDOerrorCode = $result->errorCode();
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+            $resultarray = $result->fetchAll(PDO::FETCH_CLASS);
+        }
+        catch (PDOException $e ){
+            echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+        }
         $conn=null;
+        
         return $resultarray;
+
     }
     function update($settings){
         $conn = $this->connect();
         $sql = "UPDATE ".$settings['tablename']." SET ".$settings['fieldvalues'];
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
-        $result = $conn->exec($sql);
+        try{
+            $result = $conn->exec($sql);
+            $PDOerrorCode = $result->errorCode();
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+        }
+        catch(PDOException $e){
+           echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+        }
         $conn=null;
     }
     function delete($settings){
@@ -53,7 +70,14 @@ class DB {
         $sql = "DELETE FROM ".$settings['tablename'];
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
-        $result = $conn->exec($sql);
+        try{
+            $result = $conn->exec($sql);
+            $PDOerrorCode = $result->errorCode();
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+        }
+        catch(PDOException $e){
+           echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+        }
         $conn=null;
     }
     function insert($settings){
