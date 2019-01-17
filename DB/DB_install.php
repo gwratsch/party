@@ -112,7 +112,7 @@ class DB_install{
                 "1"=>"CREATE SEQUENCE dbconfig_id_seq;",
                 "2"=>"CREATE TABLE IF NOT EXISTS dbconfig ( "
                 . "id SERIAL NOT NULL PRIMARY KEY,"
-                . " lastupdate int(6) NOT NULL, "
+                . " lastupdate int (6) NOT NULL, "
                 . "reg_date timestamp "
                 . ");",
                 "3"=>"ALTER SEQUENCE dbconfig_id_seq OWNED BY dbconfig.id;",
