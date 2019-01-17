@@ -135,16 +135,20 @@ class DB {
         $conn = $this->connect();
         foreach ($this->updatetableList as $key => $value) {
             If($key > $this->lastUpdateNumber){
-                $sqlMessage='';
+                $PDOerrorInfo='';
+                $PDOarrorCode='';
                 try{
                     $value = $this->sql_exceptions($value);
-                    $sqlMessage = $conn->exec($value);
-                    echo $sqlMessage.'<br />';
+                    $conn->exec($value);
                     echo "\nPDOStatement::errorInfo():\n";
                     $PDOerrorInfo = $conn->errorInfo();
+                    $PDOarrorCode = $conn->errorCode();
                     print_r($PDOerrorInfo);
                     echo '<br />'."\nPDO::errorCode(): ". $conn->errorCode().'<br />';
-                    if($conn->errorCode() != 0 && $PDOerrorInfo[1] !=7 ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
+                    $errorexecptions=array(
+                        '42P07',
+                    );
+                    if($PDOarrorCode != 0 && !in_array($PDOarrorCode, $errorexecptions) ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
                     $settings['tablename']='dbconfig';
                     $settings['fieldvalues']="lastupdate='".$key."'";
                     $settings['fieldconditions']='1=1';
@@ -155,10 +159,9 @@ class DB {
                 catch(PDOException $e)
                     {
                     echo "Update met id : ".$key." en sql : ".$value . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
-                    echo $sqlMessage.'<br />';
                     echo "\nPDOStatement::errorInfo():\n";
-                    print_r($conn->errorInfo());
-                    echo "\nPDO::errorCode(): ". $conn->errorCode().'<br />';
+                    print_r($PDOerrorInfo);
+                    echo "\nPDO::errorCode(): ".$PDOarrorCode.'<br />';
                         break;
                     }
             }
