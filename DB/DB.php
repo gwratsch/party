@@ -144,7 +144,7 @@ class DB {
                     $PDOerrorInfo = $conn->errorInfo();
                     print_r($PDOerrorInfo);
                     echo '<br />'."\nPDO::errorCode(): ". $conn->errorCode().'<br />';
-                    if($conn->errorCode() != 0 && $PDOerrorInfo[2] !=7 ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
+                    if($conn->errorCode() != 0 && $PDOerrorInfo[1] !=7 ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
                     $settings['tablename']='dbconfig';
                     $settings['fieldvalues']="lastupdate='".$key."'";
                     $settings['fieldconditions']='1=1';
