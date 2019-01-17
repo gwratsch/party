@@ -110,14 +110,14 @@ class DB_install{
                 ),
             "pgsql"=>array(
                 "1"=>"CREATE SEQUENCE dbconfig_id_seq;",
-                "2"=>"CREATE TABLE IF NOT EXISTS dbconfig ( id int(6) NOT NULL DEFAULT nextval('dbconfig_id_seq') PRIMARY KEY, lastupdate int(6) NOT NULL, reg_date timestamp );",
+                "2"=>'CREATE TABLE IF NOT EXISTS dbconfig ( id int(6) NOT NULL DEFAULT NEXTVAL("dbconfig_id_seq") PRIMARY KEY, lastupdate int(6) NOT NULL, reg_date timestamp );',
                 "3"=>"ALTER SEQUENCE dbconfig_id_seq OWNED BY dbconfig.id;",
                 "4"=>"INSERT INTO dbconfig ( lastupdate) VALUES ('0')", 
                 "5"=>"CREATE SEQUENCE party_id_seq;",
-                "6"=>"CREATE TABLE IF NOT EXISTS party ( partyid int(6) NOT NULL DEFAULT nextval('party_id_seq') PRIMARY KEY, userid int(6) NOT NULL, partyinfo varchar(255) NOT NULL, location varchar(255) NOT NULL, reg_date timestamp );",
+                "6"=>"CREATE TABLE IF NOT EXISTS party ( partyid int(6) NOT NULL DEFAULT NEXTVAL('party_id_seq') PRIMARY KEY, userid int(6) NOT NULL, partyinfo varchar(255) NOT NULL, location varchar(255) NOT NULL, reg_date timestamp );",
                 "7"=>"ALTER SEQUENCE party_id_seq OWNED BY party.id;",
                 "8"=>"CREATE SEQUENCE wishlist_id_seq;",
-                "9"=>"CREATE TABLE IF NOT EXISTS wishlist ( wlid int(6) NOT NULL DEFAULT nextval('wishlist_id_seq') PRIMARY KEY, partyid int(6) NOT NULL, userid int(6) NOT NULL, wlinfo varchar(255) NOT NULL, reg_date timestamp );",
+                "9"=>"CREATE TABLE IF NOT EXISTS wishlist ( wlid int(6) NOT NULL DEFAULT NEXTVAL('wishlist_id_seq') PRIMARY KEY, partyid int(6) NOT NULL, userid int(6) NOT NULL, wlinfo varchar(255) NOT NULL, reg_date timestamp );",
                 "10"=>"ALTER SEQUENCE wishlist_id_seq OWNED BY wishlist.id;",
                 "11"=>"ALTER TABLE party ADD partylist boolean",
                 "12"=>"ALTER TABLE users ADD password varchar(255)"
