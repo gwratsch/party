@@ -141,9 +141,10 @@ class DB {
                     $sqlMessage = $conn->exec($value);
                     echo $sqlMessage.'<br />';
                     echo "\nPDOStatement::errorInfo():\n";
-                    print_r($conn->errorInfo());
+                    $PDOerrorInfo = $conn->errorInfo();
+                    print_r($PDOerrorInfo);
                     echo '<br />'."\nPDO::errorCode(): ". $conn->errorCode().'<br />';
-                    if($conn->errorCode() >0){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
+                    if($conn->errorCode() != 0 && $PDOerrorInfo[2] !=7 ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
                     $settings['tablename']='dbconfig';
                     $settings['fieldvalues']="lastupdate='".$key."'";
                     $settings['fieldconditions']='1=1';
@@ -153,7 +154,7 @@ class DB {
                     }
                 catch(PDOException $e)
                     {
-                        echo "Update met id : ".$key." en sql : ".$value . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+                    echo "Update met id : ".$key." en sql : ".$value . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
                     echo $sqlMessage.'<br />';
                     echo "\nPDOStatement::errorInfo():\n";
                     print_r($conn->errorInfo());
