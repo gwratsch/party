@@ -149,7 +149,7 @@ class DB {
                     if($PDOerrorCode != 0 && !in_array($PDOerrorCode, $errorexecptions) ){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
                     $settings['tablename']='dbconfig';
                     $settings['fieldvalues']="lastupdate='".$key."'";
-                    $settings['fieldconditions']='1=1';
+                    $settings['fieldconditions']='id=1';
                     $this->update($settings);
                     echo 'Update id : '.$key.' is uitgevoerd.<br />';
                     $this->lastUpdateNumber = $key;
@@ -167,9 +167,8 @@ class DB {
         $lastKey = $this->lastUpdateNumber ;
             $settings['tablename']='dbconfig';
             $settings['fieldnames']="lastupdate";
-            $settings['fieldconditions']='1=1';
+            $settings['fieldconditions']='id=1';
             $selectResultArray = $this->select($settings);
-            //var_dump($selectResultArray);
             $this->lastUpdateNumber = $selectResultArray[0]->lastupdate;
         If ($lastKey == $this->lastUpdateNumber){
             echo t("Alle aanwezige updates zijn uitgevoerd.");
