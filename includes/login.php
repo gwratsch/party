@@ -9,6 +9,7 @@ class login {
             $email = $_POST["email"];
             $loginOk = TRUE;
             $userInfo = self::select($email);
+            var_dump($userInfo);
             if(!isset($userInfo) || !array_key_exists(0,$userInfo)){$loginOk = FALSE;}
             if(array_key_exists(0, $userInfo) && $_POST["email"] != $userInfo[0]->email){$loginOk = FALSE;}
             if(array_key_exists(0, $userInfo) && $this->hashPwd($_POST["password"]) != $userInfo[0]->password){$loginOk = FALSE;}
