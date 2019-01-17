@@ -147,6 +147,7 @@ class DB {
                     echo '<br />'."\nPDO::errorCode(): ". $conn->errorCode().'<br />';
                     $errorexecptions=array(
                         '42P07',
+                        '42701'
                     );
                     if($PDOarrorCode != 0 && !in_array($PDOarrorCode, $errorexecptions) ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
                     $settings['tablename']='dbconfig';
