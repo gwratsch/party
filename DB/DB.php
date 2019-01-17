@@ -135,9 +135,15 @@ class DB {
         $conn = $this->connect();
         foreach ($this->updatetableList as $key => $value) {
             If($key > $this->lastUpdateNumber){
+                $sqlMessage='';
                 try{
                     $value = $this->sql_exceptions($value);
-                    $conn->exec($value);
+                    $sqlMessage = $conn->exec($value);
+                    echo $sqlMessage.'<br />';
+                    echo "\nPDOStatement::errorInfo():\n";
+                    print_r($conn->errorInfo());
+                    echo '<br />'."\nPDO::errorCode(): ". $conn->errorCode().'<br />';
+                    if($conn->errorCode() >0){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
                     $settings['tablename']='dbconfig';
                     $settings['fieldvalues']="lastupdate='".$key."'";
                     $settings['fieldconditions']='1=1';
@@ -147,7 +153,12 @@ class DB {
                     }
                 catch(PDOException $e)
                     {
-                    echo "Update met id : ".$key." en sql : ".$value . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+                        echo "Update met id : ".$key." en sql : ".$value . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+                    echo $sqlMessage.'<br />';
+                    echo "\nPDOStatement::errorInfo():\n";
+                    print_r($conn->errorInfo());
+                    echo "\nPDO::errorCode(): ". $conn->errorCode().'<br />';
+                        break;
                     }
             }
         }
