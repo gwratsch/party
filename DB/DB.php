@@ -136,20 +136,17 @@ class DB {
         foreach ($this->updatetableList as $key => $value) {
             If($key > $this->lastUpdateNumber){
                 $PDOerrorInfo='';
-                $PDOarrorCode='';
+                $PDOerrorCode='';
                 try{
                     $value = $this->sql_exceptions($value);
                     $conn->exec($value);
-                    echo "\nPDOStatement::errorInfo():\n";
                     $PDOerrorInfo = $conn->errorInfo();
-                    $PDOarrorCode = $conn->errorCode();
-                    print_r($PDOerrorInfo);
-                    echo '<br />'."\nPDO::errorCode(): ". $conn->errorCode().'<br />';
+                    $PDOerrorCode = $conn->errorCode();
                     $errorexecptions=array(
                         '42P07',
                         '42701'
                     );
-                    if($PDOarrorCode != 0 && !in_array($PDOarrorCode, $errorexecptions) ){throw new Exception("Foutmelding nr : ".$conn->errorCode());}
+                    if($PDOerrorCode != 0 && !in_array($PDOerrorCode, $errorexecptions) ){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
                     $settings['tablename']='dbconfig';
                     $settings['fieldvalues']="lastupdate='".$key."'";
                     $settings['fieldconditions']='1=1';
@@ -162,7 +159,7 @@ class DB {
                     echo "Update met id : ".$key." en sql : ".$value . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
                     echo "\nPDOStatement::errorInfo():\n";
                     print_r($PDOerrorInfo);
-                    echo "\nPDO::errorCode(): ".$PDOarrorCode.'<br />';
+                    echo "\nPDO::errorCode(): ".$PDOerrorCode.'<br />';
                         break;
                     }
             }
