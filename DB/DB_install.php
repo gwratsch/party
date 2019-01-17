@@ -110,7 +110,7 @@ class DB_install{
                 ),
             "pgsql"=>array(
                 "1"=>"CREATE SEQUENCE dbconfig_id_seq;",
-                "2"=>'CREATE TABLE IF NOT EXISTS dbconfig ( id int(6) NOT NULL DEFAULT NEXTVAL("dbconfig_id_seq") PRIMARY KEY, lastupdate int(6) NOT NULL, reg_date timestamp );',
+                "2"=>'CREATE TABLE IF NOT EXISTS dbconfig ( id integer NOT NULL DEFAULT NEXTVAL("dbconfig_id_seq") PRIMARY KEY, lastupdate int(6) NOT NULL, reg_date timestamp );',
                 "3"=>"ALTER SEQUENCE dbconfig_id_seq OWNED BY dbconfig.id;",
                 "4"=>"INSERT INTO dbconfig ( lastupdate) VALUES ('0')", 
                 "5"=>"CREATE SEQUENCE party_id_seq;",
