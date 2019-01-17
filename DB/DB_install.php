@@ -111,7 +111,7 @@ class DB_install{
             "pgsql"=>array(
                 "1"=>"CREATE SEQUENCE dbconfig_id_seq;",
                 "2"=>"CREATE TABLE IF NOT EXISTS dbconfig ( "
-                . "id integer SERIAL PRIMARY KEY,"
+                . "id integer NOT NULL PRIMARY KEY DEFAULT NEXTVAL('dbconfig_id_seq'),"
                 . " lastupdate int(6) NOT NULL, "
                 . "reg_date timestamp "
                 . ");",
