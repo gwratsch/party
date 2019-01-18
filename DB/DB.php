@@ -38,7 +38,7 @@ class DB {
         try{
             $result = $conn->prepare($sql);
             $result->execute();
-            $PDOerrorCode = $conn->errorCode();
+            $PDOerrorCode = $result->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
             $resultarray = $result->fetchAll(PDO::FETCH_CLASS);
         }
@@ -56,7 +56,8 @@ class DB {
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
         try{
-            $result = $conn->exec($sql);
+            $result = $conn->prepare($sql);
+            $result->execute();
             $PDOerrorCode = $conn->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
         }
@@ -71,7 +72,8 @@ class DB {
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
         try{
-            $result = $conn->exec($sql);
+            $result = $conn->prepare($sql);
+            $result->execute();
             $PDOerrorCode = $conn->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
         }
@@ -86,7 +88,8 @@ class DB {
         $newUserId='';
         $sql = "INSERT INTO ".$settings['tablename']." (".$settings['fieldnames'].") VALUES (".$settings['fieldvalues'].");";
         try{
-            $result = $conn->exec($sql);
+            $result = $conn->prepare($sql);
+            $result->execute();
             $PDOerrorCode = $conn->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
             $newUserId =  $conn->lastInsertId();
