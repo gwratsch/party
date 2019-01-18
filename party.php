@@ -5,11 +5,11 @@ $party = new party();
 $updatePartyInfo = FALSE;
 $pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){
-    if(array_key_exists('updateUser', $_POST)){ 
-        $updatePartyInfo = TRUE;
-    }else{
+    //if(array_key_exists('updateUser', $_POST)){ 
+       // $updatePartyInfo = TRUE;
+    //}else{
         $party->save();
-    }
+    //}
 }  
 
 if(array_key_exists('partyid', $_GET)){

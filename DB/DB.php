@@ -83,9 +83,18 @@ class DB {
     function insert($settings){
         $this->checktableisCreated();
         $conn = $this->connect();
+        $newUserId='';
         $sql = "INSERT INTO ".$settings['tablename']." (".$settings['fieldnames'].") VALUES (".$settings['fieldvalues'].");";
-        $conn->exec($sql);
-        $newUserId =  $conn->lastInsertId();
+        try{
+            $result = $conn->exec($sql);
+            $PDOerrorCode = $result->errorCode();
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+            $newUserId =  $conn->lastInsertId();
+        }
+        catch(PDOException $e){
+           echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
+        }
+        
         $conn=null;
         return $newUserId;
     }
