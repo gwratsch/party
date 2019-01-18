@@ -125,7 +125,8 @@ class DB_install{
                 "9"=>"CREATE TABLE IF NOT EXISTS wishlist ( wlid integer NOT NULL DEFAULT NEXTVAL('wishlist_id_seq') PRIMARY KEY, partyid integer NOT NULL, userid integer NOT NULL, wlinfo varchar(255) NOT NULL, reg_date timestamp );",
                 "10"=>"ALTER SEQUENCE wishlist_id_seq OWNED BY wishlist.wlid;",
                 "11"=>"ALTER TABLE party ADD partylist boolean",
-                "12"=>"ALTER TABLE users ADD password varchar(255)"
+                "12"=>"ALTER TABLE users ADD password varchar(255)",
+                "13"=>"ALTER TABLE party ADD partylist boolean NOT NULL"
             )
         );
         $updateScripts = $table_list[$dbtype];

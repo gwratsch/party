@@ -39,7 +39,7 @@ class DB {
             $result = $conn->prepare($sql);
             $result->execute();
             $PDOerrorCode = $result->errorCode();
-            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
             $resultarray = $result->fetchAll(PDO::FETCH_CLASS);
         }
         catch (PDOException $e ){
@@ -59,7 +59,7 @@ class DB {
             $result = $conn->prepare($sql);
             $result->execute();
             $PDOerrorCode = $conn->errorCode();
-            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
         }
         catch(PDOException $e){
            echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
@@ -75,7 +75,7 @@ class DB {
             $result = $conn->prepare($sql);
             $result->execute();
             $PDOerrorCode = $conn->errorCode();
-            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
         }
         catch(PDOException $e){
            echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
@@ -91,7 +91,7 @@ class DB {
             $result = $conn->prepare($sql);
             $result->execute();
             $PDOerrorCode = $conn->errorCode();
-            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode);}
+            if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
             $newUserId =  $conn->lastInsertId();
         }
         catch(PDOException $e){
