@@ -127,7 +127,7 @@ class DB_install{
                 "11"=>"ALTER TABLE party ADD partylist boolean",
                 "12"=>"ALTER TABLE users ADD password varchar(255)",
                 "13"=>"ALTER TABLE party ADD partylist boolean NOT NULL",
-                "14"=>"ALTER TABLE party ALTER COLUMN partylist TYPE boolean NOT NULL"
+                "14"=>"ALTER TABLE party ALTER COLUMN partylist SET NOT NULL"
             )
         );
         $updateScripts = $table_list[$dbtype];
