@@ -34,7 +34,7 @@ class party {
          );
         $this->partylist=array(
              "name"=>"partylist",
-             "content"=>"",
+             "content"=>"false",
              "type"=>"checkbox",
              "defaultChecked"=>"",
              "displayInfo"=>""
