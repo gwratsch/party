@@ -57,8 +57,11 @@ class party {
                 $field["content"]= $contentCheck;
                 $this->$fieldName = $field;
             }
+            if($fieldName == 'userid'){
+                $this->userid['content']=int($fieldValue);
+            }
             if($fieldName == 'partyid'){
-                $this->partyid['content']=$fieldValue;
+                $this->partyid['content']=int($fieldValue);
             }
         }
         $partyid = $this->partyid;
