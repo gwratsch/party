@@ -58,10 +58,10 @@ class party {
                 $this->$fieldName = $field;
             }
             if($fieldName == 'userid'){
-                $this->userid['content']=int($fieldValue);
+                $this->userid['content']=intval($fieldValue);
             }
             if($fieldName == 'partyid'){
-                $this->partyid['content']=int($fieldValue);
+                $this->partyid['content']=intval($fieldValue);
             }
         }
         $partyid = $this->partyid;
