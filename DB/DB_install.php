@@ -27,7 +27,7 @@ class DB_install{
         if($dbinstall->checktableisCreated()){
             $settings['tablename']='dbconfig';
             $settings['fieldnames']="lastupdate";
-            $settings['fieldconditions']='1=1';
+            $settings['fieldconditions']='';
             $selectResultArray = $dbinstall->select($settings);
             $dbinstall->checktablename = $selectResultArray[0];
         }

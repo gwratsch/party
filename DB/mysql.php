@@ -30,7 +30,7 @@ class mysql  extends  DB{
         $this->createdb = FALSE;
         $conn = $this->connect();
         $sql_check = 'SHOW DATABASES LIKE "'. $this->dbname.'"';
-        $result = $conn->prepare($sql_check);
+        $result = $this->connection->prepare($sql_check);
         $result->execute();
         $resultarray = $result->fetchAll();
         if(is_array($resultarray) && count($resultarray)>0){

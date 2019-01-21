@@ -1,6 +1,5 @@
 <?php
 include_once 'settings.php';
-$path = configsettings::pathname();
 $pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){
     (new DB_install)->installdb();
@@ -54,6 +53,6 @@ if(array_key_exists('submit', $_POST)){
             <input type='submit' name='submit'>
         </form>
     </section>
-    <script src=<?php echo $path."js/party.js";?>></script>
+    <script src=<?php echo "js/party.js";?>></script>
 </body>
 </html>

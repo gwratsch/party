@@ -2,6 +2,8 @@
     
 class party {
     public $userTablename="party";
+    private $DBclass;
+    public $PageClassFile = "party.php"; 
     
     function __construct() {
         $this->partyid=array(
@@ -39,16 +41,15 @@ class party {
              "defaultChecked"=>"",
              "displayInfo"=>""
          );
+         $this->dbconnection();
     }
     function dbconnection(){
-        $this->dbtype = $dbtype = (new DB)->databasetype();
-        $this->DBconnect = new $dbtype();
+        $dbtype = (new DB)->databasetype();
+        $this->DBclass = new $dbtype();
     }
     function save(){
         $security = new security();
-        $this->dbconnection();
         $result = $_POST; 
-        //var_dump($result);
         foreach($result as $fieldName => $fieldValue){
             if(array_key_exists($fieldName, $this)){
                 $field = $this->$fieldName;
@@ -74,7 +75,6 @@ class party {
         }
     }
     function select(){
-        $this->dbconnection();
         $partyId = $this->partyid['content'];
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
@@ -90,18 +90,16 @@ class party {
         if($partyid>0){$valuesconditions .= $connectconditions."partyid = ".$partyid;}
         if($partyid=='*'){$valuesconditions="";}
         $sqlsettings['fieldconditions'] = $valuesconditions;
-        return $this->DBconnect->select($sqlsettings);
+        return $this->DBclass->select($sqlsettings);
     }
     function insert(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $sqlsettings['fieldnames']= $this->fieldnames('insert');
         $sqlsettings['fieldvalues'] = $this->fieldvalues();
-        return $this->DBconnect->insert($sqlsettings);
+        return $this->DBclass->insert($sqlsettings);
     }
     function update(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $sqlsettings['fieldvalues'] = $this->fieldupdatevalues();
@@ -110,11 +108,10 @@ class party {
         $valuesconditions = "partyid = ".$this->partyid['content'];
         $sqlsettings['fieldconditions'] = $valuesconditions;
         if($userid>0){
-            $this->DBconnect->update($sqlsettings);
+            $this->DBclass->update($sqlsettings);
         }
     }
     function delete(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $userContent = $this->userid;
@@ -122,7 +119,7 @@ class party {
         $valuesconditions = "partyid = ".$partyid;
         $sqlsettings['fieldconditions'] = $valuesconditions;
         if($userid>0){
-            $this->DBconnect->delecte($sqlsettings);
+            $this->DBclass->delecte($sqlsettings);
         }
     }
     private function fieldvalues(){
@@ -180,7 +177,6 @@ class party {
     function countcheck_wishlists(){}
     function edit(){
         $result = $this->select();
-        //var_dump($result);
         foreach ($result[0] as $key => $value) {
             if(array_key_exists($key, $this)){
                 $this->$key['content']= $value;

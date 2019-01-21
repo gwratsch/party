@@ -6,8 +6,12 @@ class user {
     protected $userDisplayTablename="userdisplay";
     protected $jsonFieldList="";
     protected $userDisplayInfo=array();
-    protected $DBconnect;
+    private $DBclass;
     protected $dbtype;
+    public $displayProtectInfo=TRUE;
+    public $PageClassFile = "user.php"; 
+    public $updateInfo = FALSE;
+    
     public function __construct(){
      $this->userid=array(
          "name"=>"userid",
@@ -72,14 +76,14 @@ class user {
          "defaultChecked"=>"checked required",
          "displayInfo"=>""
          );
+         $this->dbconnection();
     }
     function dbconnection(){
-        $this->dbtype = $dbtype = (new DB)->databasetype();
-        $this->DBconnect = new $dbtype();
+        $dbtype = (new DB)->databasetype();
+        $this->DBclass = new $dbtype();
     }
     public function save(){
         $security = new security();
-        $this->dbconnection();
         $result = $_POST; 
         foreach($result as $fieldName => $fieldValue){
             if(array_key_exists($fieldName, $this)){
@@ -127,7 +131,6 @@ class user {
 
     }
     public function select(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $sqlsettings['fieldnames'] = $this->fieldnames('select');
@@ -136,18 +139,16 @@ class user {
         $valuesconditions = "userid = ".$userid;
         if($userid=='*'){$valuesconditions="";}
         $sqlsettings['fieldconditions'] = $valuesconditions;
-        return $this->DBconnect->select($sqlsettings);
+        return $this->DBclass->select($sqlsettings);
     }
     public function insert(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $sqlsettings['fieldnames']= $this->fieldnames('insert');
         $sqlsettings['fieldvalues'] = $this->fieldvalues();
-        return $this->DBconnect->insert($sqlsettings);
+        return $this->DBclass->insert($sqlsettings);
     }
     public function update(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $sqlsettings['fieldvalues'] = $this->fieldupdatevalues();
@@ -156,11 +157,10 @@ class user {
         $valuesconditions = "userid = ".$userid;
         $sqlsettings['fieldconditions'] = $valuesconditions;
         if($userid>0){
-            $this->DBconnect->update($sqlsettings);
+            $this->DBclass->update($sqlsettings);
         }
     }
     public function delete(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userTablename;
         $userContent = $this->userid;
@@ -168,7 +168,7 @@ class user {
         $valuesconditions = "userid = ".$userid;
         $sqlsettings['fieldconditions'] = $valuesconditions;
         if($userid>0){
-            $this->DBconnect->delecte($sqlsettings);
+            $this->DBclass->delecte($sqlsettings);
         }
     }
     private function fieldvalues(){
@@ -224,7 +224,6 @@ class user {
         return $values;
     }
     private function selectdisplay(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userDisplayTablename;
         $sqlsettings['fieldnames']="udid, userid, fieldname";
@@ -233,19 +232,18 @@ class user {
         $valuesconditions = "userid = ".$userid;
         $sqlsettings['fieldconditions'] = $valuesconditions;
         
-        return $this->DBconnect->select($sqlsettings);;
+        return $this->DBclass->select($sqlsettings);;
     }
     private function insertdisplay(){
-        $this->dbconnection();
+
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userDisplayTablename;
         $sqlsettings['fieldnames']="userid, fieldname";
         $sqlsettings['fieldvalues'] = $this->displayfieldvaluesInsert();
 
-        return $this->DBconnect->insert($sqlsettings);
+        return $this->DBclass->insert($sqlsettings);
     }
     private function updatedisplay(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userDisplayTablename;
         $sqlsettings['fieldvalues'] = $this->displayfieldvaluesUpdate();
@@ -254,11 +252,10 @@ class user {
         $valuesconditions = "userid = ".$userid;
         $sqlsettings['fieldconditions'] = $valuesconditions;
         if($userid>0){
-            $this->DBconnect->update($sqlsettings);
+            $this->DBclass->update($sqlsettings);
         }
     }
     private function deletedisplay(){
-        $this->dbconnection();
         $sqlsettings=array();
         $sqlsettings['tablename']= $this->userDisplayTablename;
         $userContent = $this->userid;
@@ -266,7 +263,7 @@ class user {
         $valuesconditions = "userid = ".$userid;
         $sqlsettings['fieldconditions'] = $valuesconditions;
         if($userid>0){
-            $this->DBconnect->delecte($sqlsettings);
+            $this->DBclass->delecte($sqlsettings);
         }
     }
     private function displayfieldvaluesInsert(){
@@ -280,6 +277,7 @@ class user {
         return $values;
     }
     function edit(){
+        
         $result= $this->select();
         foreach ($result[0] as $key => $value) {
             if(array_key_exists($key, $this) && $key !='password'){

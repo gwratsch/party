@@ -1,7 +1,6 @@
 <?php
    ob_start();
 include_once 'settings.php';
-$path = (new configsettings)->pathname();
 $updateUserInfo = FALSE;
 $pagetemplate = new pagetemplate();
    

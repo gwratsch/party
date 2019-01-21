@@ -1,20 +1,20 @@
 <?php
 include_once 'config.php';
 class DB {
-    protected $conn;
     protected $db_check=false;
-    public $dbUser;
-    public $userPW;
-    public $dbname;
-    public $dbtype;
-    public $host;
-    public $port;
+    protected $dbUser;
+    protected $userPW;
+    protected $dbname;
+    protected $dbtype;
+    protected $host;
+    protected $port;
     public $tableList;
     public $createdb = true;
     public $checktablename;
     public $tabelnameCheckResult;
     public $lastUpdateNumber=0;
     protected $databaseType;
+    public $connection;
     
     function __construct() {
         $this->dbUser='';
@@ -24,19 +24,22 @@ class DB {
         $this->host = '';
         $this->port = '';
         $this->tableList=array();
+        $this->connection= $this->connect();
+    }
+    function __destruct() {
+        $this->connection= null;
     }
     function databasetype(){
         $database = config();
         return $database['dbtype'];
     }
     function select($settings){
-        $conn = $this->connect();
         $resultarray ='';
         $sql = "SELECT ".$settings['fieldnames']." FROM ".$settings['tablename'];
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
         try{
-            $result = $conn->prepare($sql);
+            $result = $this->connection->prepare($sql);
             $result->execute();
             $PDOerrorCode = $result->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
@@ -45,60 +48,52 @@ class DB {
         catch (PDOException $e ){
             echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
         }
-        $conn=null;
         
         return $resultarray;
 
     }
     function update($settings){
-        $conn = $this->connect();
         $sql = "UPDATE ".$settings['tablename']." SET ".$settings['fieldvalues'];
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
         try{
-            $result = $conn->prepare($sql);
+            $result = $this->connection->prepare($sql);
             $result->execute();
-            $PDOerrorCode = $conn->errorCode();
+            $PDOerrorCode = $this->connection->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
         }
         catch(PDOException $e){
            echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
         }
-        $conn=null;
     }
     function delete($settings){
-        $conn = $this->connect();
         $sql = "DELETE FROM ".$settings['tablename'];
         if($settings['fieldconditions'] !=''){$sql .=" WHERE ".$settings['fieldconditions'];}
         $sql .=" ;";
         try{
-            $result = $conn->prepare($sql);
+            $result = $this->connection->prepare($sql);
             $result->execute();
-            $PDOerrorCode = $conn->errorCode();
+            $PDOerrorCode = $this->connection->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
         }
         catch(PDOException $e){
            echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
         }
-        $conn=null;
     }
     function insert($settings){
         $this->checktableisCreated();
-        $conn = $this->connect();
         $newUserId='';
         $sql = "INSERT INTO ".$settings['tablename']." (".$settings['fieldnames'].") VALUES (".$settings['fieldvalues'].");";
         try{
-            $result = $conn->prepare($sql);
+            $result = $this->connection->prepare($sql);
             $result->execute();
-            $PDOerrorCode = $conn->errorCode();
+            $PDOerrorCode = $this->connection->errorCode();
             if($PDOerrorCode !=0){throw new Exception("Foutmelding nr : ".$PDOerrorCode.'. SQLS: '.$sql);}
-            $newUserId =  $conn->lastInsertId();
+            $newUserId =  $this->connection->lastInsertId();
         }
         catch(PDOException $e){
            echo "De sql : ".$sql . " kon niet uitgevoerd worden wegens problemen. <br />Melding: <br>" . $e->getMessage();
         }
-        
-        $conn=null;
         return $newUserId;
     }
     
@@ -132,10 +127,8 @@ class DB {
         if($this->createdb==FALSE){
             try {
                     $sql = $this->sql_createDatabase;
-                    $conn = $this->connect();
-                    $conn->exec($sql);
+                    $this->connection->exec($sql);
                     echo "Database created successfully<br>";
-                    $conn = null;
                     $this->createdb=TRUE;
                 }
             catch(PDOException $e)
@@ -146,11 +139,10 @@ class DB {
     }
     function createTables(){
         $this->checktableisCreated();
-        $conn = $this->connect();
         foreach ($this->tableList['table_list'] as $key => $value) {
             try{
                 $value = $this->sql_exceptions($value);
-                $conn->exec($value);
+                $this->connection->exec($value);
                 }
             catch(PDOException $e)
                 {
@@ -168,16 +160,15 @@ class DB {
             $selectResultArray = $this->select($settings);
             $this->lastUpdateNumber = $selectResultArray[0]->lastupdate;
         }
-        $conn = $this->connect();
         foreach ($this->updatetableList as $key => $value) {
             If($key > $this->lastUpdateNumber){
                 $PDOerrorInfo='';
                 $PDOerrorCode='';
                 try{
                     $value = $this->sql_exceptions($value);
-                    $conn->exec($value);
-                    $PDOerrorInfo = $conn->errorInfo();
-                    $PDOerrorCode = $conn->errorCode();
+                    $this->connection->exec($value);
+                    $PDOerrorInfo = $this->connection->errorInfo();
+                    $PDOerrorCode = $this->connection->errorCode();
                     $errorexecptions=array(
                         '42P07',
                         '42701'
