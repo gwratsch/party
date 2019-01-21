@@ -1,7 +1,12 @@
 <?php
 include_once 'settings.php';
 $party = new party();
+$userid=0;
+if(array_key_exists('userid', $_SESSION)){$party->userid['content'] = $_SESSION['userid'];} 
 $party->updateInfo = FALSE;
+//var_dump($party);
+//var_dump($_SESSION);
+//var_dump($_POST);
 $pagetemplate = new pagetemplate();
 if(array_key_exists('submit', $_POST)){
 
@@ -35,15 +40,17 @@ if(array_key_exists('partyid', $_GET)){
         <section class="container col p-3">
             <h2><?php echo t("Party info");?></h2>
             <?php 
-            if(array_key_exists('userid', $_SESSION)){$party->userid['content'] = $_SESSION['userid'];} 
-            echo (new formview)->buildHtmlForm($party);?>
+            //if(array_key_exists('userid', $_SESSION)){$party->userid['content'] = $_SESSION['userid'];} 
+            
+            echo (new formview)->buildHtmlForm($party);
+            ?>
         </section>
         <section class="container col">
             <h2>Party list</h2>
         <?php
-        $userid=0;
-        if(array_key_exists('userid', $_SESSION)){$userid = $_SESSION['userid']; }
-        $party->userid['content'] = $userid;
+       // $userid=0;
+        //if(array_key_exists('userid', $_SESSION)){$userid = $_SESSION['userid']; }
+        //$party->userid['content'] = $userid;
         $party->partyid['content'] = '';
         $result = $party->select();
         echo '<table class="table table-striped"><thead>

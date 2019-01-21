@@ -17,8 +17,8 @@ class user {
          "name"=>"userid",
          "content"=>"0",
          "defaultChecked"=>"",
-         "type"=>"hidden"
-         
+         "type"=>"hidden",
+         "primary_key"=>TRUE
      ); 
      $this->firstname=array(
          "name"=>"firstname",

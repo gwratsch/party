@@ -3,7 +3,6 @@ include_once 'settings.php';
 class formview {
 
     function buildHtmlForm($pageObject){
-       //var_dump($pageObject);
     $content='<form action="'.$pageObject->PageClassFile.'" method="post" class="form-horizontal">'
             . $this->buildHtmlFormContent($pageObject).
             '<input type="submit" name="submit">
@@ -21,6 +20,9 @@ class formview {
                 $name = $keyContent['name'];
                 $content='';
                 if($pageObject->updateInfo == TRUE){
+                    $content = $keyContent['content'];
+                }
+                if(isset($keyContent['foreign_key'])){
                     $content = $keyContent['content'];
                 }
                 $defaultChecked = $keyContent['defaultChecked'];

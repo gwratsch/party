@@ -9,9 +9,6 @@ class login {
             $email = $_POST["email"];
             $loginOk = TRUE;
             $userInfo = self::select($email);
-            var_dump($userInfo);
-            var_dump($this->hashPwd($_POST["password"]));
-            var_dump('Aantal tekens van het email adres: '.strlen($userInfo[0]->email));
             if(!isset($userInfo) || !array_key_exists(0,$userInfo)){$loginOk = FALSE;}
             if(array_key_exists(0, $userInfo) && $_POST["email"] != trim($userInfo[0]->email)){$loginOk = FALSE;}
             if(array_key_exists(0, $userInfo) && $this->hashPwd($_POST["password"]) != $userInfo[0]->password){$loginOk = FALSE;}

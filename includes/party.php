@@ -11,14 +11,16 @@ class party {
              "content"=>"0",
              "type"=>"hidden",
              "defaultChecked"=>"",
-             "displayInfo"=>""
+             "displayInfo"=>"",
+             "primary_key"=>TRUE
          );
         $this->userid=array(
              "name"=>"userid",
              "content"=>"0",
              "type"=>"hidden",
              "defaultChecked"=>"",
-             "displayInfo"=>""
+             "displayInfo"=>"",
+             "foreign_key"=>TRUE
          );
        $this->partyinfo=array(
              "name"=>"partyInfo",
