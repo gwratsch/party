@@ -18,7 +18,7 @@ class pagetemplate {
     }
     function header(){
         $content = '<header class="container p-3">
-    <h1>'.t($this->title).'</h1>
+    <h1>ACC '.t($this->title).'</h1>
 </header>';
         return $content;
     }
